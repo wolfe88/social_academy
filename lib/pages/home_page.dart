@@ -19,19 +19,37 @@ class _Stories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      child: Column(
-        children: [
-          Expanded(
-            child: ListView.builder(
-              scrollDirection: Axis.vertical,
-              itemBuilder: (BuildContext context, int index) {
-                return const Text("user profiles");
-              },
-            ),
-          )
-        ],
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.max,
+      children: <Widget>[
+        new Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            child: Column(
+              children: [
+                TextField(
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.search),
+                    border: OutlineInputBorder(),
+                    labelText: 'Search...',
+                    suffixIcon: IconButton(
+                      icon: Icon(Icons.tune),
+                      onPressed: () {},
+                    ),
+                  ),
+                )
+              ],
+            )),
+        new Padding(
+          padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 5.0),
+          child: Column(
+            children: [
+              TextButton(onPressed: () {}, child: Text("Kullanıcılar"))
+            ],
+          ),
+        )
+      ],
     );
   }
 }
