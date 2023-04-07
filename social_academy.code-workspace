@@ -1,12 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"name": "social_academy @ 667a74a",
-			"uri": "gitlens://7b22726566223a2236363761373461623065643164343664623161616537366136313838303637323865383864363765222c227265706f50617468223a22633a2f55736572732f466c6f72612f4465736b746f702f4769744875625f414c4c2f466c757474657250726f6a656374732f736f6369616c5f61636164656d792f736f6369616c5f61636164656d79227d/c:/Users/Flora/Desktop/GitHub_ALL/FlutterProjects/social_academy/social_academy?{\"ref\":\"667a74a\"}"
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "."
+        }
+    ]
 }
