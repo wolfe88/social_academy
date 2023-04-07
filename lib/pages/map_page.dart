@@ -8,10 +8,12 @@ class MapPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: MyTextField(
-          containerColor: Colors.blue,
-          textfieldTextColor: Colors.red, //hint colorla birleştir
-          hintColor: Colors.yellow,
-          borderRadius: 8),
+        containerColor: Colors.blue,
+        textfieldTextColor: Colors.red, //hint colorla birleştir
+        hintColor: Colors.yellow,
+        borderRadius: 8,
+        hintText: "deneme",
+      ),
     );
   }
 }
