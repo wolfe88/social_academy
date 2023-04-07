@@ -19,21 +19,13 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        foregroundColor: AppColors.accent,
-        backgroundColor: AppColors.secondary,
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(CupertinoIcons.back),
-        ),
-      ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(4),
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 16),
+                padding: const EdgeInsets.only(top: 24),
                 child: SizedBox(
                   width: 160,
                   height: 160,
