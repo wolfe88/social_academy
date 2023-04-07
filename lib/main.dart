@@ -1,4 +1,5 @@
 import 'package:social_academy/constants/routes.dart';
+import 'package:social_academy/pages/chat_page.dart';
 import 'package:social_academy/pages/map_page.dart';
 import 'package:social_academy/pages/events_page.dart';
 import 'package:social_academy/pages/home_page.dart';
@@ -28,6 +29,7 @@ class BasePage extends StatelessWidget {
           mappageRoute: (context) => const MapPage(),
           eventspageRoute: (context) => const EventsPage(),
           profilepageRoute: (context) => const ProfilePage(),
+          chatRoute: (context) => const ChatPage(),
         });
   }
 }

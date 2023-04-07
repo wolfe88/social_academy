@@ -4,18 +4,19 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class MyTextField extends StatefulWidget {
-  const MyTextField({
-    super.key,
-    required this.containerColor,
-    required this.textfieldTextColor,
-    required this.hintColor,
-    required this.borderRadius,
-  });
+  const MyTextField(
+      {super.key,
+      required this.containerColor,
+      required this.textfieldTextColor,
+      required this.hintColor,
+      required this.borderRadius,
+      required this.hintText});
 
   final Color containerColor;
   final Color textfieldTextColor;
   final Color hintColor;
   final double borderRadius;
+  final String hintText;
 
   @override
   State<MyTextField> createState() => _MyTextFieldState();
@@ -35,7 +36,7 @@ class _MyTextFieldState extends State<MyTextField> {
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.all(16),
           border: InputBorder.none,
-          hintText: 'Email',
+          hintText: widget.hintText,
           hintStyle: TextStyle(color: widget.hintColor),
         ),
       ),
@@ -52,6 +53,8 @@ class MyIconedTextField extends StatefulWidget {
     required this.hintColor,
     required this.borderRadius,
     required this.icon,
+
+    required this.hintText,
   });
 
   final Color containerColor;
@@ -60,6 +63,8 @@ class MyIconedTextField extends StatefulWidget {
   final Color hintColor;
   final double borderRadius;
   final Icon icon;
+
+  final String hintText;
 
   @override
   State<MyIconedTextField> createState() => _MyIconedTextFieldState();
@@ -83,7 +88,7 @@ class _MyIconedTextFieldState extends State<MyIconedTextField> {
             Icons.email,
             color: widget.iconColor,
           ),
-          hintText: 'Email',
+          hintText: widget.hintText,
           hintStyle: TextStyle(color: widget.hintColor),
         ),
       ),
