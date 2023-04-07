@@ -1,8 +1,10 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:social_academy/helpers.dart';
-import 'package:social_academy/pages/calls_page.dart';
-import 'package:social_academy/pages/contacts_page.dart';
-import 'package:social_academy/pages/messages_page.dart';
-import 'package:social_academy/pages/notifications_page.dart';
+import 'package:social_academy/pages/map_page.dart';
+import 'package:social_academy/pages/events_page.dart';
+import 'package:social_academy/pages/home_page.dart';
+import 'package:social_academy/pages/conversations_page.dart';
+import 'package:social_academy/pages/profile_page.dart';
 import 'package:social_academy/theme.dart';
 import 'package:social_academy/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,17 +16,19 @@ import '../widgets/avatar.dart';
 // int pageIndex0 = 0;
 
 final pages = [
-  const MessagesPage(),
-  const NotificationsPage(),
-  const CallsPage(),
-  const ContactsPage(),
+  const HomePage(),
+  const ConversationsPage(),
+  const MapPage(),
+  const EventsPage(),
+  const ProfilePage(),
 ];
 
 final pageTitles = [
-  "Messages",
-  "Notifications",
-  "Calls",
-  "Contacts",
+  "Home",
+  "Sohbetler",
+  "Harita",
+  "Etkinlikler",
+  "Profil",
 ];
 
 final ValueNotifier<int> pageIndex = ValueNotifier(0);
@@ -67,27 +71,27 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           },
         ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 18.0),
-            child: IconButton(
-              icon: Avatar.small(url: Helpers.randomPictureUrl()),
-              onPressed: () {},
-              splashRadius: 24,
-            ),
-          ),
-        ],
-        leading: Align(
-          alignment: Alignment.centerRight,
+        // actions:
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 18.0),
           child: IconButton(
-            icon: const Icon(Icons.search, color: Colors.white),
+            icon: Avatar.small(url: Helpers.randomPictureUrl()),
             onPressed: () {},
-
-            // splashColor: Colors.red,
-            // highlightColor: Colors.red,
             splashRadius: 24,
           ),
         ),
+
+        // Align(
+        //   alignment: Alignment.centerRight,
+        //   child: IconButton(
+        //     icon: const Icon(Icons.search, color: Colors.white),
+        //     onPressed: () {},
+
+        //     // splashColor: Colors.red,
+        //     // highlightColor: Colors.red,
+        //     splashRadius: 24,
+        //   ),
+        // ),
       ),
       body: ValueListenableBuilder(
         valueListenable: pageIndex,
@@ -133,32 +137,39 @@ class _BottomNavigationBarState extends State<_BottomNavigationBar> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             _NavigationBarItem(
-              label: "Messages",
-              icon: CupertinoIcons.bubble_left_bubble_right_fill,
+              label: "Home",
+              icon: CupertinoIcons.home,
               route: 0,
               onTap: handleItemSelected,
               isSelected: (selectedIndex == 0),
             ),
             _NavigationBarItem(
-              label: "Notifications",
-              icon: CupertinoIcons.bell_solid,
+              label: "Sohbetler",
+              icon: CupertinoIcons.bubble_left_bubble_right,
               route: 1,
               onTap: handleItemSelected,
               isSelected: (selectedIndex == 1),
             ),
             _NavigationBarItem(
-              label: "Calls",
-              icon: CupertinoIcons.phone_fill,
+              label: "Harita",
+              icon: CupertinoIcons.map,
               route: 2,
               onTap: handleItemSelected,
               isSelected: (selectedIndex == 2),
             ),
             _NavigationBarItem(
-              label: "Contacts",
-              icon: CupertinoIcons.person_2_fill,
+              label: "Ekinlikler",
+              icon: CupertinoIcons.rectangle_stack_badge_person_crop,
               route: 3,
               onTap: handleItemSelected,
               isSelected: (selectedIndex == 3),
+            ),
+            _NavigationBarItem(
+              label: "Profil",
+              icon: CupertinoIcons.person,
+              route: 4,
+              onTap: handleItemSelected,
+              isSelected: (selectedIndex == 4),
             ),
           ],
         ));

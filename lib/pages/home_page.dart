@@ -1,8 +1,9 @@
 import 'package:social_academy/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 
-class MessagesPage extends StatelessWidget {
-  const MessagesPage({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,22 +20,13 @@ class _Stories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 134,
       child: Column(
         children: [
-          const Text(
-            "stories",
-            style: TextStyle(
-              fontWeight: FontWeight.w900,
-              fontSize: 15,
-              color: AppColors.textFaded,
-            ),
-          ),
           Expanded(
             child: ListView.builder(
-              scrollDirection: Axis.horizontal,
+              scrollDirection: Axis.vertical,
               itemBuilder: (BuildContext context, int index) {
-                return const Text("data");
+                return const Text("user profiles");
               },
             ),
           )

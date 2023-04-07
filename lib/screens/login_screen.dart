@@ -74,7 +74,7 @@ class _LoginViewState extends State<LoginView> {
               final email = _email.text;
               final password = _password.text;
               Navigator.of(context)
-                  .pushNamedAndRemoveUntil(messagesRoute, (route) => false);
+                  .pushNamedAndRemoveUntil(homepageRoute, (route) => false);
             }),
             //   try {
             //     final userCredential = await AuthService.firebase().logIn(

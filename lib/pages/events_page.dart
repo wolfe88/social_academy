@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class NotificationsPage extends StatelessWidget {
-  const NotificationsPage({super.key});
+class EventsPage extends StatelessWidget {
+  const EventsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text("NotificationsPage"),
+      child: Text("EventsPage"),
     );
   }
 }

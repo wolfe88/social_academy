@@ -1,16 +1,17 @@
 import 'package:social_academy/constants/routes.dart';
-import 'package:social_academy/pages/calls_page.dart';
-import 'package:social_academy/pages/contacts_page.dart';
-import 'package:social_academy/pages/messages_page.dart';
-import 'package:social_academy/pages/notifications_page.dart';
+import 'package:social_academy/pages/map_page.dart';
+import 'package:social_academy/pages/events_page.dart';
+import 'package:social_academy/pages/home_page.dart';
+import 'package:social_academy/pages/conversations_page.dart';
+import 'package:social_academy/pages/profile_page.dart';
 import 'package:social_academy/screens/home_screen.dart';
 import 'package:social_academy/theme.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(HomePage());
+void main() => runApp(BasePage());
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class BasePage extends StatelessWidget {
+  const BasePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +23,11 @@ class HomePage extends StatelessWidget {
         title: "social_academy",
         home: const HomeScreen(), //child appbar
         routes: {
-          contactsRoute: (context) => const ContactsPage(),
-          messagesRoute: (context) => const MessagesPage(),
-          callsRoute: (context) => const CallsPage(),
-          notificationsRoute: (context) => const NotificationsPage(),
+          homepageRoute: (context) => const HomePage(),
+          conversationspageRoute: (context) => const ConversationsPage(),
+          mappageRoute: (context) => const MapPage(),
+          eventspageRoute: (context) => const EventsPage(),
+          profilepageRoute: (context) => const ProfilePage(),
         });
   }
 }
