@@ -10,6 +10,7 @@ import 'package:social_academy/pages/profile_page.dart';
 import 'package:social_academy/screens/home_screen.dart';
 import 'package:social_academy/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:social_academy/pages/avatarcreate_page.dart';
 
 void main() => runApp(BasePage());
 

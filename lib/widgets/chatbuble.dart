@@ -120,22 +120,19 @@ class NotificationBubble extends StatelessWidget {
       fit: BoxFit.fill,
       child: Container(
         constraints: const BoxConstraints(
-          maxWidth: 300,
+          minWidth: 350,
+          maxWidth: 350,
         ),
         margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(4),
-              bottomRight: Radius.circular(4),
-              topLeft: Radius.circular(4),
-              topRight: Radius.circular(4)),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
           color: Colors.white,
         ),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(16),
           child: Text(
             text,
-            style: const TextStyle(color: Colors.black),
+            style: const TextStyle(color: Colors.black, fontSize: 18),
           ),
         ),
       ),

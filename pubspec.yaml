@@ -46,6 +46,8 @@ dependencies:
   file_picker: ^5.2.7
   mime: ^1.0.4
   sizer: ^2.0.15
+  flutter_svg: ^2.0.4
+  random_avatar: ^0.0.8
 
 
 dev_dependencies:
@@ -73,7 +75,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - messages.json
+    - assets/
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
