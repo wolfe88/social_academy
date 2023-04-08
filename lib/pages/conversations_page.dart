@@ -7,11 +7,14 @@ class ConversationsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GFButton(
-      onPressed: () {
-        Navigator.of(context).pushNamed(chatRoute);
-      },
-      child: Text("ConversationsPage"),
+    return Padding(
+      padding: const EdgeInsets.only(top: 18.0),
+      child: GFButton(
+        onPressed: () {
+          Navigator.of(context).pushNamed(chatRoute);
+        },
+        child: Text("ConversationsPage"),
+      ),
     );
   }
 }
