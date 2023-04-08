@@ -39,14 +39,15 @@ dependencies:
   google_fonts: ^3.0.1
   cached_network_image: ^3.2.3
   getwidget: ^3.0.1 #https://pub.dev/packages/getwidget
+
   auto_size_text: ^3.0.0 
   flutter_chat_ui: ^1.6.6 #https://docs.flyer.chat/flutter/chat-ui/
   open_filex: ^4.3.2
   image_picker: ^0.8.7+1
   file_picker: ^5.2.7
   mime: ^1.0.4
+  random_avatar: ^0.0.8
   sizer: ^2.0.15
-  random_avatar: ^0.0.7
 
 
 dev_dependencies:

@@ -1,12 +1,9 @@
 import 'package:social_academy/widgets/map_item_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:social_academy/widgets/textfield.dart';
 
-class MapPage extends StatelessWidget {
+class MapScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("MapPage"),
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.amber,

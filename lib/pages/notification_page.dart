@@ -35,14 +35,39 @@ class _NotificationPageState extends State<NotificationPage> {
         alignment: Alignment.center,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
+          children: [
             Padding(
-              padding: EdgeInsets.only(top: 16),
-              child: NotificationBubble(
+              padding: const EdgeInsets.only(top: 16),
+              child: notification(
+
                   text:
                       "Yunus Emre yeni bir etkinlik oluşuturdu! Şimdi incele."),
             ),
             Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: Align(
+                  alignment: Alignment.topLeft,
+                  child: notificationBuble(
+                      text: "Yakınlarda yeni bir etkinlik var!")),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: Align(
+                  alignment: Alignment.topLeft,
+                  child: notificationBuble(
+                      text: "Dilara Maya seninle bağlantı kurmak istiyor.")),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: Align(
+                  alignment: Alignment.topLeft,
+                  child: notificationBuble(text: "deneme")),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: Align(
+                  alignment: Alignment.topLeft,
+                  child: notificationBuble(text: "deneme")),
               padding: EdgeInsets.only(left: 16),
               child: Align(
                 alignment: Alignment.topLeft,
