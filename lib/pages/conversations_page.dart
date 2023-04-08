@@ -8,6 +8,7 @@ class ConversationsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GFButton(
+      color: Colors.black,
       onPressed: () {
         Navigator.of(context).pushNamed(chatRoute);
       },

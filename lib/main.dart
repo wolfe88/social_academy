@@ -9,6 +9,7 @@ import 'package:social_academy/pages/profile_page.dart';
 import 'package:social_academy/screens/home_screen.dart';
 import 'package:social_academy/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:social_academy/pages/avatarcreate_page.dart';
 
 void main() => runApp(BasePage());
 
@@ -32,6 +33,7 @@ class BasePage extends StatelessWidget {
           profilepageRoute: (context) => const ProfilePage(),
           chatRoute: (context) => const ChatPage(),
           notificationRoute: (context) => const NotificationPage(),
+          avatarRoute: (context) => AvatarCreatePage(),
         });
   }
 }
