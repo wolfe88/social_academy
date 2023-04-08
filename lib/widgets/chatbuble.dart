@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:social_academy/main.dart';
 
-class leftChatBuble extends StatelessWidget {
+class LeftChatBuble extends StatelessWidget {
   final String text;
 
   final String timetext;
 
-  const leftChatBuble({
+  const LeftChatBuble({
     super.key,
     required this.text,
     required this.timetext,
@@ -19,11 +20,11 @@ class leftChatBuble extends StatelessWidget {
       children: [
         FittedBox(
           child: Container(
-            constraints: BoxConstraints(
+            constraints: const BoxConstraints(
               maxWidth: 300,
             ),
             margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                   bottomLeft: Radius.zero,
                   bottomRight: Radius.circular(16),
@@ -34,18 +35,18 @@ class leftChatBuble extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "$text",
-                style: TextStyle(color: Colors.black),
+                text,
+                style: const TextStyle(color: Colors.black),
               ),
             ),
           ),
         ),
         Container(
           alignment: Alignment.centerLeft,
-          margin: EdgeInsets.only(left: 20, top: 4),
+          margin: const EdgeInsets.only(left: 20, top: 4),
           child: Text(
-            "$timetext",
-            style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+            timetext,
+            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
           ),
         )
       ],
@@ -53,12 +54,12 @@ class leftChatBuble extends StatelessWidget {
   }
 }
 
-class rightChatBuble extends StatelessWidget {
+class RightChatBuble extends StatelessWidget {
   final String text;
 
   final String timetext;
 
-  const rightChatBuble({
+  const RightChatBuble({
     super.key,
     required this.text,
     required this.timetext,
@@ -71,12 +72,12 @@ class rightChatBuble extends StatelessWidget {
       children: [
         FittedBox(
           child: Container(
-            constraints: BoxConstraints(
+            constraints: const BoxConstraints(
               maxWidth: 300,
             ),
             margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(16),
                   bottomRight: Radius.zero,
                   topLeft: Radius.circular(16),
@@ -86,21 +87,58 @@ class rightChatBuble extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "$text",
-                style: TextStyle(color: Colors.black),
+                text,
+                style: const TextStyle(color: Colors.black),
               ),
             ),
           ),
         ),
         Container(
           alignment: Alignment.centerRight,
-          margin: EdgeInsets.only(right: 20, top: 4),
+          margin: const EdgeInsets.only(right: 20, top: 4),
           child: Text(
-            "$timetext",
-            style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+            timetext,
+            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
           ),
         )
       ],
+    );
+  }
+}
+
+class NotificationBubble extends StatelessWidget {
+  final String text;
+
+  const NotificationBubble({
+    super.key,
+    required this.text,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return FittedBox(
+      fit: BoxFit.fill,
+      child: Container(
+        constraints: const BoxConstraints(
+          maxWidth: 300,
+        ),
+        margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(4),
+              bottomRight: Radius.circular(4),
+              topLeft: Radius.circular(4),
+              topRight: Radius.circular(4)),
+          color: Colors.white,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            text,
+            style: const TextStyle(color: Colors.black),
+          ),
+        ),
+      ),
     );
   }
 }

@@ -4,6 +4,7 @@ import 'package:social_academy/pages/map_page.dart';
 import 'package:social_academy/pages/events_page.dart';
 import 'package:social_academy/pages/home_page.dart';
 import 'package:social_academy/pages/conversations_page.dart';
+import 'package:social_academy/pages/notification_page.dart';
 import 'package:social_academy/pages/profile_page.dart';
 import 'package:social_academy/screens/home_screen.dart';
 import 'package:social_academy/theme.dart';
@@ -30,6 +31,7 @@ class BasePage extends StatelessWidget {
           eventspageRoute: (context) => const EventsPage(),
           profilepageRoute: (context) => const ProfilePage(),
           chatRoute: (context) => const ChatPage(),
+          notificationRoute: (context) => const NotificationPage(),
         });
   }
 }

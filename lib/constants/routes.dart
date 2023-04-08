@@ -7,3 +7,4 @@ const conversationspageRoute = "/pages/conversations_page/";
 const eventspageRoute = "/pages/events_page/";
 const profilepageRoute = "/pages/profile_page/";
 const chatRoute = "/pages/chat_page/";
+const notificationRoute = "/pages/notification_page/";

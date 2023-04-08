@@ -1,0 +1,55 @@
+[
+    {
+      "author": {
+        "firstName": "Selin",
+        "id": "4c2307ba-3d40-442f-b1ff-b271f63904ca",
+        "lastName": "Arslan"
+      },
+      "createdAt": 1655648404000,
+      "id": "c67ed376-52bf-4d4e-ba2a-7a0f8467b22a",
+      "status": "seen",
+      "text": "Harika! Caddenin girişinde bekliyorum. 🥰",
+      "type": "text"
+    },
+    {
+      "author": {
+        "firstName": "Selin",
+        "id": "4c2307ba-3d40-442f-b1ff-b271f63904ca",
+        "imageUrl": "https://i.pravatar.cc/300?u=e52552f4-835d-4dbe-ba77-b076e659774d",
+        "lastName": "Arslan"
+      },
+      "createdAt": 1655648403000,
+      "height": 1280,
+      "id": "02797655-4d73-402e-a319-50fde79e2bc4",
+      "name": "madrid",
+      "size": 585000,
+      "status": "seen",
+      "type": "image",
+      "uri": "https://fastly.picsum.photos/id/299/5000/3288.jpg?hmac=vajPmKo1hPW0RLYeb2h14Ry9Mp5Gw0rs0yc78FmBmdM",
+      "width": 1920
+    },
+    {
+      "author": {
+        "firstName": "Matthewme",
+        "id": "82091008-a484-4a89-ae75-a22bf8d6f3ac",
+        "lastName": "White"
+      },
+      "createdAt": 1655648401000,
+      "id": "64747b28-df19-4a0c-8c47-316dc3546e3c",
+      "status": "seen",
+      "text": "Elbette geliyorum. 💪",
+      "type": "text"
+    },
+    {
+      "author": {
+        "firstName": "Selin",
+        "id": "4c2307ba-3d40-442f-b1ff-b271f63904ca",
+        "lastName": "Arslan"
+      },
+      "createdAt": 1655624464000,
+      "id": "38681a33-2563-42aa-957b-cfc12f791d16",
+      "status": "seen",
+      "text": "Merhaba! Bugünkü buluşmaya geliyorsun değil mi? Ben varmak üzereyim.",
+      "type": "text"
+    }
+  ]

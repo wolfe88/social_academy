@@ -1,4 +1,5 @@
 import 'package:google_fonts/google_fonts.dart';
+import 'package:social_academy/constants/routes.dart';
 import 'package:social_academy/helpers.dart';
 import 'package:social_academy/pages/map_page.dart';
 import 'package:social_academy/pages/events_page.dart';
@@ -77,7 +78,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(notificationRoute);
+                    },
                     icon: const Icon(
                       CupertinoIcons.bell,
                       color: AppColors.iconDark,

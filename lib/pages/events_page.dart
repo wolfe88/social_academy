@@ -6,7 +6,7 @@ class EventsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(15.0),
+      margin: const EdgeInsets.all(15.0),
       height: 61,
       child: Row(
         children: [
@@ -15,7 +15,7 @@ class EventsPage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(35.0),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                       offset: Offset(0, 3), blurRadius: 5, color: Colors.grey)
                 ],
@@ -23,12 +23,12 @@ class EventsPage extends StatelessWidget {
               child: Row(
                 children: [
                   IconButton(
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.face,
                         color: Colors.blueAccent,
                       ),
                       onPressed: () {}),
-                  Expanded(
+                  const Expanded(
                     child: TextField(
                       decoration: InputDecoration(
                           hintText: "Type Something...",
@@ -37,24 +37,26 @@ class EventsPage extends StatelessWidget {
                     ),
                   ),
                   IconButton(
-                    icon: Icon(Icons.photo_camera, color: Colors.blueAccent),
+                    icon: const Icon(Icons.photo_camera,
+                        color: Colors.blueAccent),
                     onPressed: () {},
                   ),
                   IconButton(
-                    icon: Icon(Icons.attach_file, color: Colors.blueAccent),
+                    icon:
+                        const Icon(Icons.attach_file, color: Colors.blueAccent),
                     onPressed: () {},
                   )
                 ],
               ),
             ),
           ),
-          SizedBox(width: 15),
+          const SizedBox(width: 15),
           Container(
             padding: const EdgeInsets.all(15.0),
-            decoration:
-                BoxDecoration(color: Colors.blueAccent, shape: BoxShape.circle),
+            decoration: const BoxDecoration(
+                color: Colors.blueAccent, shape: BoxShape.circle),
             child: InkWell(
-              child: Icon(
+              child: const Icon(
                 Icons.keyboard_voice,
                 color: Colors.white,
               ),
