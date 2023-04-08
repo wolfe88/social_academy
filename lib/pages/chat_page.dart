@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:social_academy/helpers.dart';
 import 'package:social_academy/theme.dart';
 import 'package:social_academy/widgets/avatar.dart';
+import "package:social_academy/widgets/chatbuble.dart";
+import 'package:social_academy/widgets/textfield.dart';
 
 class ChatPage extends StatelessWidget {
   const ChatPage({super.key});
@@ -33,26 +35,83 @@ class ChatPage extends StatelessWidget {
           icon: const Icon(CupertinoIcons.back),
         ),
       ),
-      body: Container(
-          height: 150,
-          constraints: BoxConstraints(
-            maxHeight: 200.0,
-          ),
-          margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-                bottomLeft: Radius.zero,
-                bottomRight: Radius.circular(16),
-                topLeft: Radius.circular(16),
-                topRight: Radius.circular(16)),
-            color: Colors.amber,
-          ),
-          child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum imperdiet nisi, at euismod lorem blandit egestas. Nam at ultrices ex. Nullam molestie arcu lacus. Mauris sed erat interdum, finibus ligula maximus, ullamcorper elit. Mauris fermentum elit et libero efficitur, a sagittis est dignissim. Nam tortor tellus, malesuada non pulvinar eu, tincidunt dignissim quam. Nulla vestibulum, diam sit amet pulvinar condimentum, magna velit bibendum neque, sit amet scelerisque lacus turpis quis magna. Fusce venenatis sem a dolor efficitur, ac congue tellus malesuada. Maecenas at bibendum purus. Quisque metus nisl, blandit id tincidunt sed, ornare at ex. Nunc a erat hendrerit, porta eros feugiat, faucibus magna.",
-                style: TextStyle(color: Colors.black),
-              ))),
+      body: Column(
+        children: [
+          leftChatBuble(
+              text:
+                  "dljsgfklsdjglksjdklgjsdklgjsdklgjdsklsdfıjuhgjsdhgjksdhgjksdhgjksdhgkjsdhgskjdhgjsdhgjsdagfsdagsdgsdgsdgsdgsdgsdgsdgsdgdsdslkj",
+              timetext: "4.44"),
+          rightChatBuble(
+              text:
+                  "sdpjgoklsdjgkldsjklgdsjgklsdhjkgbsdhkljghdsjklghdsjkghsdjkghfsdjkghdfkjghfdjkghdjfkghkfjdghfdjkhgfkdjh",
+              timetext: "4.45"),
+          rightChatBuble(
+              text:
+                  "sdpjgoklsdjgkldsjklksdjhafhsdjhfkjdashfkjdshfkjsdgdsjgklsdhjkgbsdhkljghdsjklghdsjkghsdjkghfsdjkghdfkjghfdjkghdjfkghkfjdghfdjkhgfkdjh",
+              timetext: "4.46"),
+          rightChatBuble(
+              text:
+                  "sdpjgoklsdjgkldsjklgdssdghsdkljghdsjkghdsjkghsdjkghdskghsdghkjdhsgjgklsdhjkgbsdhkljghdsjklghdsjkghsdjkghfsdjkghdfkjghfdjkghdjfkghkfjdghfdjkhgfkdjh",
+              timetext: "4.47"),
+          Stack(
+            children: <Widget>[
+              Align(
+                alignment: Alignment.bottomLeft,
+                child: Container(
+                  padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
+                  height: 60,
+                  width: double.infinity,
+                  color: Colors.white,
+                  child: Row(
+                    children: <Widget>[
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                            color: Colors.lightBlue,
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Icon(
+                            Icons.add,
+                            color: Colors.white,
+                            size: 20,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                              hintText: "Write message...",
+                              hintStyle: TextStyle(color: Colors.black54),
+                              border: InputBorder.none),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      FloatingActionButton(
+                        onPressed: () {},
+                        child: Icon(
+                          Icons.send,
+                          color: Colors.white,
+                          size: 18,
+                        ),
+                        backgroundColor: Colors.blue,
+                        elevation: 0,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
     );
   }
 }
