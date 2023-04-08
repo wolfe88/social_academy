@@ -18,7 +18,7 @@ import '../widgets/avatar.dart';
 final pages = [
   const HomePage(),
   const ConversationsPage(),
-  const MapPage(),
+  MapPage(),
   const EventsPage(),
   const ProfilePage(),
 ];

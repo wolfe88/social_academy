@@ -26,7 +26,7 @@ class BasePage extends StatelessWidget {
         routes: {
           homepageRoute: (context) => const HomePage(),
           conversationspageRoute: (context) => const ConversationsPage(),
-          mappageRoute: (context) => const MapPage(),
+          mappageRoute: (context) => MapPage(),
           eventspageRoute: (context) => const EventsPage(),
           profilepageRoute: (context) => const ProfilePage(),
           chatRoute: (context) => const ChatPage(),

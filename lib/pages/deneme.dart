@@ -1,13 +1,9 @@
 import 'package:social_academy/widgets/map_item_widget.dart';
 import 'package:flutter/material.dart';
 
-class MapPage extends StatelessWidget {
+class MapScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-<<<<<<< Updated upstream
-    return const Center(
-      child: Text("MapPage"),
-=======
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.amber,
@@ -54,7 +50,6 @@ class MapPage extends StatelessWidget {
           ),
         ),
       ),
->>>>>>> Stashed changes
     );
   }
 }
