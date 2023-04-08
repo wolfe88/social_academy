@@ -38,8 +38,7 @@ class _NotificationPageState extends State<NotificationPage> {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 16),
-              child: notification(
-
+              child: NotificationBubble(
                   text:
                       "Yunus Emre yeni bir etkinlik oluşuturdu! Şimdi incele."),
             ),
@@ -47,50 +46,18 @@ class _NotificationPageState extends State<NotificationPage> {
               padding: const EdgeInsets.only(left: 16),
               child: Align(
                   alignment: Alignment.topLeft,
-                  child: notificationBuble(
+                  child: NotificationBubble(
                       text: "Yakınlarda yeni bir etkinlik var!")),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 16),
               child: Align(
                   alignment: Alignment.topLeft,
-                  child: notificationBuble(
+                  child: NotificationBubble(
                       text: "Dilara Maya seninle bağlantı kurmak istiyor.")),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 16),
-              child: Align(
-                  alignment: Alignment.topLeft,
-                  child: notificationBuble(text: "deneme")),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16),
-              child: Align(
-                  alignment: Alignment.topLeft,
-                  child: notificationBuble(text: "deneme")),
-              padding: EdgeInsets.only(left: 16),
-              child: Align(
-                alignment: Alignment.topLeft,
-                child: NotificationBubble(
-                    text: "Yakınlarda yeni bir etkinlik var!"),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 16),
-              child: Align(
-                alignment: Alignment.topLeft,
-                child: NotificationBubble(
-                    text: "Dilara Maya seninle bağlantı kurmak istiyor."),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 16),
-              child: Align(
-                  alignment: Alignment.topLeft,
-                  child: NotificationBubble(text: "deneme")),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 16),
               child: Align(
                   alignment: Alignment.topLeft,
                   child: NotificationBubble(text: "deneme")),
