@@ -31,14 +31,14 @@ class _AvatarCreatePageState extends State<AvatarCreatePage> {
                 color: Colors.white,
                 textColor: Colors.black,
                 onPressed: () {
-                  String svg = RandomAvatarString(
+                  String svg = randomAvatarString(
                     DateTime.now().toIso8601String(),
                     trBackground: false,
                   );
                   log(svg);
 
                   _painters.add(
-                    RandomAvatar(
+                    randomAvatar(
                       DateTime.now().toIso8601String(),
                       height: 200,
                       width: 200,
