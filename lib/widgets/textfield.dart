@@ -53,7 +53,6 @@ class MyIconedTextField extends StatefulWidget {
     required this.hintColor,
     required this.borderRadius,
     required this.icon,
-
     required this.hintText,
   });
 
