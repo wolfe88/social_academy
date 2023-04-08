@@ -62,6 +62,7 @@ class MyIconedTextField extends StatefulWidget {
   final Color hintColor;
   final double borderRadius;
   final Icon icon;
+
   final String hintText;
 
   @override

@@ -39,6 +39,7 @@ class _NotificationPageState extends State<NotificationPage> {
             Padding(
               padding: const EdgeInsets.only(top: 16),
               child: notification(
+
                   text:
                       "Yunus Emre yeni bir etkinlik oluşuturdu! Şimdi incele."),
             ),
@@ -67,6 +68,32 @@ class _NotificationPageState extends State<NotificationPage> {
               child: Align(
                   alignment: Alignment.topLeft,
                   child: notificationBuble(text: "deneme")),
+              padding: EdgeInsets.only(left: 16),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: NotificationBubble(
+                    text: "Yakınlarda yeni bir etkinlik var!"),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 16),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: NotificationBubble(
+                    text: "Dilara Maya seninle bağlantı kurmak istiyor."),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 16),
+              child: Align(
+                  alignment: Alignment.topLeft,
+                  child: NotificationBubble(text: "deneme")),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 16),
+              child: Align(
+                  alignment: Alignment.topLeft,
+                  child: NotificationBubble(text: "deneme")),
             ),
           ],
         ),
