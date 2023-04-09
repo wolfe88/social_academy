@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'dart:developer';
 import 'package:random_avatar/random_avatar.dart';
+import 'package:social_academy/widgets/custom_image_view.dart';
+import 'package:social_academy/widgets/map_item_widget.dart';
 
 class AvatarCreatePage extends StatefulWidget {
   AvatarCreatePage({super.key});
@@ -17,43 +19,30 @@ class _AvatarCreatePageState extends State<AvatarCreatePage> {
   final List<Widget> _painters = <Widget>[];
   @override
   Widget build(BuildContext context) {
+    var assetPaths = [];
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Align(
-              alignment: Alignment.center,
-              child: GFButton(
-                size: GFSize.LARGE,
-                color: Colors.white,
-                textColor: Colors.black,
-                onPressed: () {
-                  String svg = randomAvatarString(
-                    DateTime.now().toIso8601String(),
-                    trBackground: false,
-                  );
-                  log(svg);
-
-                  _painters.add(
-                    randomAvatar(
-                      DateTime.now().toIso8601String(),
-                      height: 200,
-                      width: 200,
-                    ),
-                  );
-                  _controller.text = svg;
-                  setState(() {});
-                },
-                child: const Text("Avatar Oluştur"),
-              ),
-            ),
-            const SizedBox(height: 20),
-            ..._painters,
-          ],
+      body: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 5, // number of columns
+          childAspectRatio: 1, // aspect ratio of each image
         ),
+        itemCount: AvatarListRandom().length,
+        itemBuilder: (context, index) {
+          return Container(
+            margin: EdgeInsets.all(4),
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Image.asset(
+              "${AvatarListRandom()[index]}.png",
+              fit: BoxFit.cover,
+            ),
+          );
+        },
       ),
     );
   }
