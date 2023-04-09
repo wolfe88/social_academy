@@ -36,66 +36,40 @@ class _ConversationsBubble extends State<ConversationsBubble> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 8, 4),
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
                     child: Avatar.medium(url: Helpers.randomPictureUrl()),
                   ),
                 ],
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  RichText(
-                    textAlign: TextAlign.left,
-                    text: const TextSpan(
-                      text: 'Selin\n',
-                      style: TextStyle(
-                        fontSize: 24,
-                        height: 1.5,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      children: <TextSpan>[
-                        TextSpan(
-                            text: 'Naber kanka?',
-                            style: TextStyle(
-                                fontSize: 19, fontWeight: FontWeight.normal)),
-                      ],
+              Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                RichText(
+                  textAlign: TextAlign.left,
+                  text: const TextSpan(
+                    text: 'Selin\n',
+                    style: TextStyle(
+                      fontSize: 24,
+                      height: 1.3,
+                      fontWeight: FontWeight.w500,
                     ),
-                  )
-                  // Text(
-                  //   textAlign: TextAlign.start,
-                  //   "Selin \nnaber kanka",
-                  //   style: TextStyle(
-                  //     fontSize: 24,
-                  //     height: 1.5,
-                  //   ),
-                  // ),
-                ],
-              ),
-              // Row(
-              //   children: [
-              //     Text(
-              //       "naber kanka",
-              //       textAlign: TextAlign.start,
-              //       style: TextStyle(fontSize: 16),
-              //     ),
-              //   ],
-              // ),
-
-              const Spacer(),
-              Container(
-                margin: EdgeInsets.only(right: 16),
-                alignment: Alignment.centerRight,
-                width: 8.w,
-                height: 8.w,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: Colors.green,
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: 'Naber kanka?',
+                        style: TextStyle(
+                            fontSize: 19, fontWeight: FontWeight.normal),
+                      ),
+                    ],
+                  ),
                 ),
-                child: Center(
-                    child: Text(
-                  "1",
-                  style: TextStyle(fontSize: 20),
-                )),
+              ]),
+              Container(
+                margin: EdgeInsets.fromLTRB(0, 10, 50, 0),
+                child: Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Text(
+                    "LastMassage",
+                    style: TextStyle(fontSize: 12),
+                  ),
+                ),
               ),
             ],
           ),
