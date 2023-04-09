@@ -50,37 +50,15 @@ class _ConversationsBubble extends State<ConversationsBubble> {
                   ),
                 ],
               ),
-<<<<<<< HEAD
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  RichText(
-                    textAlign: TextAlign.left,
-                    text: TextSpan(
-                      text: '$lastMassageAuthorName\n',
-                      style: TextStyle(
-                        fontSize: 24,
-                        height: 1.3,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: 'Naber kanka?',
-                          style: TextStyle(
-                              fontSize: 19, fontWeight: FontWeight.normal),
-                        ),
-                      ],
-=======
               Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                 RichText(
                   textAlign: TextAlign.left,
-                  text: const TextSpan(
-                    text: 'Selin\n',
+                  text: TextSpan(
+                    text: '$lastMassageAuthorName\n',
                     style: TextStyle(
                       fontSize: 24,
                       height: 1.3,
                       fontWeight: FontWeight.w500,
->>>>>>> 4fb965f9f189a6766625bfc95471b70ec98bcf22
                     ),
                     children: <TextSpan>[
                       TextSpan(
