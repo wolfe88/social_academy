@@ -1,7 +1,12 @@
+import 'dart:math';
+
 import 'package:social_academy/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:social_academy/widgets/avatar.dart';
+import 'package:social_academy/widgets/custom_image_view.dart';
+
+import '../widgets/map_item_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,6 +20,8 @@ class HomePage extends StatelessWidget {
   }
 }
 
+final imageList = AvatarListRandom();
+final random = Random();
 List username = ["Yunus Emre", "Selin", "Rabia", "Dilara"];
 
 class _Stories extends StatelessWidget {
@@ -74,10 +81,12 @@ class _Stories extends StatelessWidget {
                 },
               ),
               ExpansionTile(
-                leading: CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQumX3R_S4mU4LTy4dQM9_RY97GXkMmx7OmRA&usqp=CAU"),
+                leading: CustomImageView(
+                  imagePath: imageList[random.nextInt(15)] + ".png",
+                  height: 48,
+                  width: 48,
                 ),
+
                 title: Text(
                   username[1],
                   style: TextStyle(

@@ -1,6 +1,8 @@
+import 'dart:convert';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_chat_ui/flutter_chat_ui.dart';
@@ -19,8 +21,15 @@ class ConversationsBubble extends StatefulWidget {
 }
 
 class _ConversationsBubble extends State<ConversationsBubble> {
-  final List<types.Message> _messages = [];
+  late List<types.Message> _messages = [];
+  get lastMassageAuthorName => _messages.last.author.firstName;
   final _user = const types.User(id: '82091008-a484-4a89-ae75-a22bf8d6f3ac');
+
+  @override
+  void initState() {
+    super.initState();
+    _loadMessages();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +45,7 @@ class _ConversationsBubble extends State<ConversationsBubble> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 8, 4),
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
                     child: Avatar.medium(url: Helpers.randomPictureUrl()),
                   ),
                 ],
@@ -46,18 +55,19 @@ class _ConversationsBubble extends State<ConversationsBubble> {
                 children: [
                   RichText(
                     textAlign: TextAlign.left,
-                    text: const TextSpan(
-                      text: 'Selin\n',
+                    text: TextSpan(
+                      text: '$lastMassageAuthorName\n',
                       style: TextStyle(
                         fontSize: 24,
-                        height: 1.5,
+                        height: 1.3,
                         fontWeight: FontWeight.w500,
                       ),
                       children: <TextSpan>[
                         TextSpan(
-                            text: 'Naber kanka?',
-                            style: TextStyle(
-                                fontSize: 19, fontWeight: FontWeight.normal)),
+                          text: 'Naber kanka?',
+                          style: TextStyle(
+                              fontSize: 19, fontWeight: FontWeight.normal),
+                        ),
                       ],
                     ),
                   )
@@ -102,5 +112,16 @@ class _ConversationsBubble extends State<ConversationsBubble> {
         ),
       ),
     );
+  }
+
+  void _loadMessages() async {
+    final response = await rootBundle.loadString('assets/messages.json');
+    final messages = (jsonDecode(response) as List)
+        .map((e) => types.Message.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+    setState(() {
+      _messages = messages;
+    });
   }
 }
