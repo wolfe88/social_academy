@@ -25,7 +25,8 @@ class _Stories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start
+    ,
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         SafeArea(

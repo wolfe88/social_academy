@@ -61,7 +61,7 @@ class MapPage extends StatelessWidget {
           ),
           const Expanded(
             child: Image(
-              fit: BoxFit.fill,
+              fit: BoxFit.cover,
               image: AssetImage("assets/map.png"),
             ),
           ),
