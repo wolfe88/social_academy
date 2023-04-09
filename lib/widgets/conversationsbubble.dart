@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -7,6 +9,7 @@ import 'package:sizer/sizer.dart';
 import 'package:social_academy/helpers.dart';
 import 'package:social_academy/theme.dart';
 import 'package:social_academy/widgets/avatar.dart';
+import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 
 class ConversationsBubble extends StatefulWidget {
   const ConversationsBubble({super.key});
@@ -16,6 +19,9 @@ class ConversationsBubble extends StatefulWidget {
 }
 
 class _ConversationsBubble extends State<ConversationsBubble> {
+  final List<types.Message> _messages = [];
+  final _user = const types.User(id: '82091008-a484-4a89-ae75-a22bf8d6f3ac');
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
