@@ -4,8 +4,8 @@ import 'dart:math';
 
 List<String> AvatarListRandom() {
   List<String> avatarList = [];
-  for (int i = 1; i <= 15; i++) {
-    avatarList.add("assets/avatar $i");
+  for (int i = 1; i <= 85; i++) {
+    avatarList.add("assets/avatar ($i)");
   }
   return avatarList;
 }
@@ -29,7 +29,7 @@ class MapItemWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               CustomImageView(
-                imagePath: imageList[random.nextInt(15)] + ".png",
+                imagePath: imageList[random.nextInt(85)] + ".png",
                 height: 48,
                 width: 48,
               ),

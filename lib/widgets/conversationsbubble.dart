@@ -22,7 +22,6 @@ class ConversationsBubble extends StatefulWidget {
 
 class _ConversationsBubble extends State<ConversationsBubble> {
   late List<types.Message> _messages = [];
-  get lastMassageAuthorName => _messages.last.author.firstName;
   final _user = const types.User(id: '82091008-a484-4a89-ae75-a22bf8d6f3ac');
 
   @override
@@ -30,6 +29,8 @@ class _ConversationsBubble extends State<ConversationsBubble> {
     super.initState();
     _loadMessages();
   }
+
+  get lastMassageAuthorName => _messages.last.author.firstName;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +55,7 @@ class _ConversationsBubble extends State<ConversationsBubble> {
                 RichText(
                   textAlign: TextAlign.left,
                   text: TextSpan(
-                    text: '$lastMassageAuthorName\n',
+                    text: 'Selin\n',
                     style: TextStyle(
                       fontSize: 24,
                       height: 1.3,

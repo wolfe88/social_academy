@@ -60,7 +60,7 @@ class _Stories extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 16.0),
                 child: ExpansionTile(
                   leading: CustomImageView(
-                    imagePath: imageList[random.nextInt(15)] + ".png",
+                    imagePath: imageList[random.nextInt(85)] + ".png",
                     height: 48,
                     width: 48,
                   ),
@@ -128,7 +128,6 @@ class _Stories extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(right:16.0),
                                 child: IconButton(onPressed:() {
-
                                 }, icon: Icon(Icons.info),
                                           color: Colors.green[500]),
                               ),

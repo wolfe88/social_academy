@@ -47,7 +47,7 @@ class MapPage extends StatelessWidget {
                               height: 24,
                             );
                           },
-                          itemCount: 6,
+                          itemCount: 60,
                           itemBuilder: (context, index) {
                             return MapItemWidget();
                           },

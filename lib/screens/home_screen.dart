@@ -1,4 +1,5 @@
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
 import 'package:social_academy/constants/routes.dart';
 import 'package:social_academy/helpers.dart';
 import 'package:social_academy/pages/map_page.dart';
@@ -55,59 +56,75 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: pageIndex.value != 0
           ? null
-          : AppBar(
-              centerTitle: true,
-              backgroundColor: Colors.transparent,
-              elevation: 0,
-              title: ValueListenableBuilder(
-                valueListenable: title,
-                builder: (context, value, child) {
-                  return Text(
-                    value,
-                    style: const TextStyle(
-                      letterSpacing: 1.4,
-                      height: 1,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
-                  );
-                },
+          : PreferredSize(
+              preferredSize: Size(
+                40,
+                40,
               ),
-              actions: [
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: IconButton(
-                    onPressed: () {
-                      Navigator.of(context).pushNamed(notificationRoute);
-                    },
-                    icon: const Icon(
-                      CupertinoIcons.bell,
-                      color: AppColors.iconDark,
-                    ),
-                  ),
-                )
-              ],
-              leading: Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: IconButton(
-                  icon: Avatar.small(url: Helpers.randomPictureUrl()),
-                  onPressed: () {},
-                  splashRadius: 24,
+              child: AppBar(
+                centerTitle: true,
+                backgroundColor: Colors.white,
+                elevation: 0,
+                title: ValueListenableBuilder(
+                  valueListenable: title,
+                  builder: (context, value, child) {
+                    return RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'Selin\n',
+                            style: TextStyle(
+                              fontSize: 24.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'Hoşgeldin!',
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
                 ),
+                actions: [
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: IconButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(notificationRoute);
+                      },
+                      icon: const Icon(
+                        CupertinoIcons.bell,
+                        color: AppColors.iconDark,
+                      ),
+                    ),
+                  )
+                ],
+                leading: Padding(
+                  padding: const EdgeInsets.only(left: 18.0),
+                  child: Image(
+                    fit: BoxFit.cover,
+                    image: AssetImage("assets/avatar (4).png"),
+                  ),
+                ),
+
+                // Align(
+                //   alignment: Alignment.centerRight,
+                //   child: IconButton(
+                //     icon: const Icon(Icons.search, color: Colors.white),
+                //     onPressed: () {},
+
+                //     // splashColor: Colors.red,
+                //     // highlightColor: Colors.red,
+                //     splashRadius: 24,
+                //   ),
+                // ),
               ),
-
-              // Align(
-              //   alignment: Alignment.centerRight,
-              //   child: IconButton(
-              //     icon: const Icon(Icons.search, color: Colors.white),
-              //     onPressed: () {},
-
-              //     // splashColor: Colors.red,
-              //     // highlightColor: Colors.red,
-              //     splashRadius: 24,
-              //   ),
-              // ),
             ),
       body: ValueListenableBuilder(
         valueListenable: pageIndex,
