@@ -21,6 +21,7 @@ class ConversationsBubble extends StatefulWidget {
 }
 
 class _ConversationsBubble extends State<ConversationsBubble> {
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
