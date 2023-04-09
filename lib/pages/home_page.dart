@@ -60,7 +60,7 @@ class _Stories extends StatelessWidget {
               children: [
                 ExpansionTile(
                   leading: CustomImageView(
-                    imagePath: imageList[random.nextInt(15)] + ".png",
+                    imagePath: imageList[random.nextInt(85)] + ".png",
                     height: 48,
                     width: 48,
                   ),
@@ -108,7 +108,7 @@ class _Stories extends StatelessWidget {
                 ),
                 ExpansionTile(
                   leading: CustomImageView(
-                    imagePath: imageList[random.nextInt(15)] + ".png",
+                    imagePath: imageList[random.nextInt(85)] + ".png",
                     height: 48,
                     width: 48,
                   ),
@@ -155,7 +155,7 @@ class _Stories extends StatelessWidget {
                 ),
                 ExpansionTile(
                   leading: CustomImageView(
-                    imagePath: imageList[random.nextInt(15)] + ".png",
+                    imagePath: imageList[random.nextInt(85)] + ".png",
                     height: 48,
                     width: 48,
                   ),
@@ -203,7 +203,7 @@ class _Stories extends StatelessWidget {
                 ),
                 ExpansionTile(
                   leading: CustomImageView(
-                    imagePath: imageList[random.nextInt(15)] + ".png",
+                    imagePath: imageList[random.nextInt(85)] + ".png",
                     height: 48,
                     width: 48,
                   ),
