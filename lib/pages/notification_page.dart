@@ -35,37 +35,29 @@ class _NotificationPageState extends State<NotificationPage> {
         alignment: Alignment.center,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
+          children: [
             Padding(
-              padding: EdgeInsets.only(top: 16),
+              padding: const EdgeInsets.only(top: 16),
               child: NotificationBubble(
                   text:
                       "Yunus Emre yeni bir etkinlik oluşuturdu! Şimdi incele."),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 16),
-              child: Align(
-                alignment: Alignment.topLeft,
-                child: NotificationBubble(
-                    text: "Yakınlarda yeni bir etkinlik var!"),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 16),
-              child: Align(
-                alignment: Alignment.topLeft,
-                child: NotificationBubble(
-                    text: "Dilara Maya seninle bağlantı kurmak istiyor."),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 16),
+              padding: const EdgeInsets.only(left: 16),
               child: Align(
                   alignment: Alignment.topLeft,
-                  child: NotificationBubble(text: "deneme")),
+                  child: NotificationBubble(
+                      text: "Yakınlarda yeni bir etkinlik var!")),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 16),
+              padding: const EdgeInsets.only(left: 16),
+              child: Align(
+                  alignment: Alignment.topLeft,
+                  child: NotificationBubble(
+                      text: "Dilara Maya seninle bağlantı kurmak istiyor.")),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 16),
               child: Align(
                   alignment: Alignment.topLeft,
                   child: NotificationBubble(text: "deneme")),

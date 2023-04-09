@@ -57,6 +57,7 @@ class _Stories extends StatelessWidget {
                   backgroundImage: NetworkImage(
                       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQumX3R_S4mU4LTy4dQM9_RY97GXkMmx7OmRA&usqp=CAU"),
                 ),
+
                 title: Text(
                   username[0],
                   style: TextStyle(
@@ -92,7 +93,6 @@ class _Stories extends StatelessWidget {
                     ),
                   ),
                 ],
-
                 onExpansionChanged: (isExpanded) {
                   print("Expanded: $isExpanded");
                 },
@@ -226,7 +226,6 @@ class _Stories extends StatelessWidget {
                     ),
                   ),
                 ],
-
                 onExpansionChanged: (isExpanded) {
                   print("Expanded: $isExpanded");
                 },

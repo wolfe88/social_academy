@@ -7,6 +7,8 @@ import 'package:social_academy/theme.dart';
 import 'package:social_academy/widgets/avatar.dart';
 import 'package:social_academy/widgets/textfield.dart';
 
+import '../constants/routes.dart';
+
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
@@ -26,11 +28,17 @@ class _ProfilePageState extends State<ProfilePage> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 24),
-                child: SizedBox(
-                  width: 160,
-                  height: 160,
-                  child: Avatar.small(
-                    url: Helpers.randomPictureUrl(),
+                child: Container(
+                  width: 180,
+                  height: 180,
+                  child: InkWell(
+                    radius: 200,
+                    onTap: () {
+                      Navigator.of(context).pushNamed(avatarRoute);
+                    },
+                    child: Avatar.small(
+                      url: Helpers.randomPictureUrl(),
+                    ),
                   ),
                 ),
               ),
