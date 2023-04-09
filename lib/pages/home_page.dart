@@ -4,8 +4,8 @@ import 'package:getwidget/getwidget.dart';
 import 'package:social_academy/widgets/avatar.dart';
 import 'dart:math';
 import 'package:social_academy/widgets/map_item_widget.dart';
-
 import '../widgets/custom_image_view.dart';
+
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -54,11 +54,11 @@ class _Stories extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 5.0),
-            child: Column(
-              children: [
-                ExpansionTile(
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: ExpansionTile(
                   leading: CustomImageView(
                     imagePath: imageList[random.nextInt(15)] + ".png",
                     height: 48,
@@ -73,173 +73,67 @@ class _Stories extends StatelessWidget {
                         color: Colors.yellow),
                   ), // Text
                   children: [
-                    Container(
-                      padding: const EdgeInsets.all(20),
+                    Padding(
+                      padding: const EdgeInsets.only(left:12.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Icon(Icons.work, color: Colors.green[500]),
-                              const Text('Kariyer'),
+                              Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(right:32.0),
+                                      child: Icon(Icons.work, color: Colors.green[500]),
+                                    ),
+                                  
+                                    const Text('Proje - Google Türkiye', textAlign: TextAlign.left),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(right:32.0),
+                                      child: Icon(Icons.account_balance,
+                                          color: Colors.green[500]),
+                                    ),
+                                    const Text('Istanbul Teknik Üniversitesi',textAlign: TextAlign.left),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(16.0),
+                              
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(right:32.0),
+                                      child: Icon(Icons.auto_awesome,
+                                          color: Colors.green[500]),
+                                    ),
+                                    const Text('Flutter, Figma, Blender', textAlign: TextAlign.left),
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
                           Column(
                             children: [
-                              Icon(Icons.account_balance,
-                                  color: Colors.green[500]),
-                              const Text('Eğitim'),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Icon(Icons.auto_awesome,
-                                  color: Colors.green[500]),
-                              const Text('Beceriler'),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                  onExpansionChanged: (isExpanded) {
-                    print("Expanded: $isExpanded");
-                  },
-                ),
-                ExpansionTile(
-                  leading: CustomImageView(
-                    imagePath: imageList[random.nextInt(15)] + ".png",
-                    height: 48,
-                    width: 48,
-                  ),
-                  title: Text(
-                    username[1],
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.yellow),
-                  ), // Text
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            children: [
-                              Icon(Icons.work, color: Colors.green[500]),
-                              const Text('Kariyer'),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Icon(Icons.account_balance,
-                                  color: Colors.green[500]),
-                              const Text('Eğitim'),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Icon(Icons.auto_awesome,
-                                  color: Colors.green[500]),
-                              const Text('Beceriler'),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                  onExpansionChanged: (isExpanded) {
-                    print("Expanded: $isExpanded");
-                  },
-                ),
-                ExpansionTile(
-                  leading: CustomImageView(
-                    imagePath: imageList[random.nextInt(15)] + ".png",
-                    height: 48,
-                    width: 48,
-                  ),
-                  title: Text(
-                    username[2],
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.yellow),
-                  ), // Text
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            children: [
-                              Icon(Icons.work, color: Colors.green[500]),
-                              const Text('Kariyer'),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Icon(Icons.account_balance,
-                                  color: Colors.green[500]),
-                              const Text('Eğitim'),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Icon(Icons.auto_awesome,
-                                  color: Colors.green[500]),
-                              const Text('Beceriler'),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                              Padding(
+                                padding: const EdgeInsets.only(right:16.0),
+                                child: IconButton(onPressed:() {
 
-                  onExpansionChanged: (isExpanded) {
-                    print("Expanded: $isExpanded");
-                  },
-                ),
-                ExpansionTile(
-                  leading: CustomImageView(
-                    imagePath: imageList[random.nextInt(15)] + ".png",
-                    height: 48,
-                    width: 48,
-                  ),
-                  title: Text(
-                    username[3],
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.yellow),
-                  ), // Text
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            children: [
-                              Icon(Icons.work, color: Colors.green[500]),
-                              const Text('Kariyer'),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Icon(Icons.account_balance,
-                                  color: Colors.green[500]),
-                              const Text('Eğitim'),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Icon(Icons.auto_awesome,
-                                  color: Colors.green[500]),
-                              const Text('Beceriler'),
-                            ],
-                          ),
+                                }, icon: Icon(Icons.info),
+                                          color: Colors.green[500]),
+                              ),
+                          ],
+                           ),
                         ],
                       ),
                     ),
@@ -248,8 +142,8 @@ class _Stories extends StatelessWidget {
                     print("Expanded: $isExpanded");
                   },
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),
