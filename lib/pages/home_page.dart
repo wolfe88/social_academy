@@ -135,8 +135,9 @@ class _Stories extends StatelessWidget {
                         style: TextStyle(color: Colors.yellow),
                       ),
                     ),
-                  ),
+                  )
                 ],
+
                 onExpansionChanged: (isExpanded) {
                   print("Expanded: $isExpanded");
                 },
