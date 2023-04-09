@@ -45,6 +45,42 @@ class _ConversationsBubble extends State<ConversationsBubble> {
                       style: TextStyle(
                         fontSize: 24,
                       ),
+    return SafeArea(
+      child: SizedBox(
+        height: 12.h,
+        child: GFButton(
+          color: AppColors.accent,
+          onPressed: () {},
+          child: Row(
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                    child: Avatar.medium(url: Helpers.randomPictureUrl()),
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RichText(
+                    textAlign: TextAlign.left,
+                    text: const TextSpan(
+                      text: 'Selin\n',
+                      style: TextStyle(
+                        fontSize: 24,
+                        height: 1.3,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: 'Naber kanka?',
+                          style: TextStyle(
+                              fontSize: 19, fontWeight: FontWeight.normal),
+                        ),
+                      ],
                     ),
                   ),
                 ),

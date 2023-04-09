@@ -8,6 +8,8 @@ import 'package:social_academy/widgets/avatar.dart';
 import 'package:social_academy/widgets/textfield.dart';
 
 import '../constants/routes.dart';
+import '../widgets/custom_image_view.dart';
+import 'home_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -20,8 +22,8 @@ class _ProfilePageState extends State<ProfilePage> {
   bool s1 = false;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
+    return SafeArea(
+      child: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(4),
           child: Column(
@@ -36,8 +38,10 @@ class _ProfilePageState extends State<ProfilePage> {
                     onTap: () {
                       Navigator.of(context).pushNamed(avatarRoute);
                     },
-                    child: Avatar.small(
-                      url: Helpers.randomPictureUrl(),
+                    child: CustomImageView(
+                      imagePath: imageList[2] + ".png",
+                      height: 48,
+                      width: 48,
                     ),
                   ),
                 ),
@@ -54,7 +58,7 @@ class _ProfilePageState extends State<ProfilePage> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
                 child: MyTextField(
-                    hintText: "Lorem",
+                    hintText: "İsiminiz",
                     containerColor: Colors.white,
                     textfieldTextColor: Colors.black,
                     hintColor: Colors.black,
@@ -63,7 +67,7 @@ class _ProfilePageState extends State<ProfilePage> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
                 child: MyTextField(
-                    hintText: "İpsum",
+                    hintText: "Soyisiminiz",
                     containerColor: Colors.white,
                     textfieldTextColor: Colors.black,
                     hintColor: Colors.black,
@@ -72,7 +76,16 @@ class _ProfilePageState extends State<ProfilePage> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
                 child: MyTextField(
-                    hintText: "0555 555 55 55",
+                    hintText: "Telefon Numaranız",
+                    containerColor: Colors.white,
+                    textfieldTextColor: Colors.black,
+                    hintColor: Colors.black,
+                    borderRadius: 8),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
+                child: MyTextField(
+                    hintText: "e-Posta Adresiniz",
                     containerColor: Colors.white,
                     textfieldTextColor: Colors.black,
                     hintColor: Colors.black,
