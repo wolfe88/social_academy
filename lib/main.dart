@@ -36,6 +36,7 @@ class BasePage extends StatelessWidget {
             profilepageRoute: (context) => const ProfilePage(),
             chatRoute: (context) => const ChatPage(),
             notificationRoute: (context) => const NotificationPage(),
+            avatarRoute: (context) => AvatarCreatePage(),
           },
         );
       },

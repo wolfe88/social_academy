@@ -39,7 +39,7 @@ class MapItemWidget extends StatelessWidget {
                 ),
                 child: Text(
                   "Lorem",
-                  style: TextStyle(fontSize: 10),
+                  style: TextStyle(fontSize: 12, color: Colors.black),
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                 ),
