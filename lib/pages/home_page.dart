@@ -1,3 +1,6 @@
+// ignore_for_file: unused_import
+
+import 'package:flutter/rendering.dart';
 import 'package:social_academy/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
@@ -50,6 +53,7 @@ class _Stories extends StatelessWidget {
                       ),
                     ),
                   )
+
                 ],
               ),
             ),
