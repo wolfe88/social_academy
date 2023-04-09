@@ -18,33 +18,6 @@ class ConversationsBubble extends StatefulWidget {
 class _ConversationsBubble extends State<ConversationsBubble> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 10.h,
-      child: GFButton(
-        color: AppColors.accent,
-        onPressed: () {},
-        child: Row(
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 4, 8, 4),
-                  child: Avatar.medium(url: Helpers.randomPictureUrl()),
-                ),
-              ],
-            ),
-            Column(
-              children: [
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
-                    child: Text(
-                      "ProfileName",
-                      style: TextStyle(
-                        fontSize: 24,
-                      ),
     return SafeArea(
       child: SizedBox(
         height: 12.h,
@@ -62,49 +35,38 @@ class _ConversationsBubble extends State<ConversationsBubble> {
                   ),
                 ],
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  RichText(
-                    textAlign: TextAlign.left,
-                    text: const TextSpan(
-                      text: 'Selin\n',
-                      style: TextStyle(
-                        fontSize: 24,
-                        height: 1.3,
-                        fontWeight: FontWeight.w500,
+              Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                RichText(
+                  textAlign: TextAlign.left,
+                  text: const TextSpan(
+                    text: 'Selin\n',
+                    style: TextStyle(
+                      fontSize: 24,
+                      height: 1.3,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: 'Naber kanka?',
+                        style: TextStyle(
+                            fontSize: 19, fontWeight: FontWeight.normal),
                       ),
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: 'Naber kanka?',
-                          style: TextStyle(
-                              fontSize: 19, fontWeight: FontWeight.normal),
-                        ),
-                      ],
-                    ),
+                    ],
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 10, 50, 0),
-                  child: Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Text(
-                      "LastMassage",
-                      style: TextStyle(fontSize: 12),
-                    ),
+              ]),
+              Container(
+                margin: EdgeInsets.fromLTRB(0, 10, 50, 0),
+                child: Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Text(
+                    "LastMassage",
+                    style: TextStyle(fontSize: 12),
                   ),
                 ),
-              ],
-            ),
-            Container(
-              alignment: Alignment.centerRight,
-              width: 10.w,
-              height: 10.w,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: AppColors.iconLight),
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );
