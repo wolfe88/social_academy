@@ -21,16 +21,6 @@ class ConversationsBubble extends StatefulWidget {
 }
 
 class _ConversationsBubble extends State<ConversationsBubble> {
-  late List<types.Message> _messages = [];
-  get lastMassageAuthorName => _messages.last.author.firstName;
-  final _user = const types.User(id: '82091008-a484-4a89-ae75-a22bf8d6f3ac');
-
-  @override
-  void initState() {
-    super.initState();
-    _loadMessages();
-  }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -39,62 +29,62 @@ class _ConversationsBubble extends State<ConversationsBubble> {
         child: GFButton(
           color: AppColors.accent,
           onPressed: () {},
-          child: Row(
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                    child: Avatar.medium(url: Helpers.randomPictureUrl()),
-                  ),
-                ],
-              ),
-              Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                RichText(
-                  textAlign: TextAlign.left,
-                  text: TextSpan(
-                    text: '$lastMassageAuthorName\n',
-                    style: TextStyle(
-                      fontSize: 24,
-                      height: 1.3,
-                      fontWeight: FontWeight.w500,
+          child: Wrap(children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      child: Avatar.medium(url: Helpers.randomPictureUrl()),
                     ),
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: 'Naber kanka?',
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    RichText(
+                      textAlign: TextAlign.left,
+                      text: TextSpan(
+                        text: 'Selin\n',
                         style: TextStyle(
-                            fontSize: 19, fontWeight: FontWeight.normal),
+                          fontSize: 24,
+                          height: 1.3,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: 'Naber kanka?',
+                            style: TextStyle(
+                                fontSize: 19, fontWeight: FontWeight.normal),
+                          ),
+                        ],
                       ),
-                    ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.fromLTRB(0, 0, 0, 6),
+                  child: Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Text(
+                      "1:18 PM",
+                      style: TextStyle(fontSize: 12),
+                    ),
                   ),
                 ),
-              ]),
-              Container(
-                margin: EdgeInsets.fromLTRB(0, 10, 50, 0),
-                child: Align(
-                  alignment: Alignment.bottomLeft,
-                  child: Text(
-                    "LastMassage",
-                    style: TextStyle(fontSize: 12),
-                  ),
-                ),
-              ),
-            ],
-          ),
+                Container()
+              ],
+            ),
+          ]),
         ),
       ),
     );
-  }
-
-  void _loadMessages() async {
-    final response = await rootBundle.loadString('assets/messages.json');
-    final messages = (jsonDecode(response) as List)
-        .map((e) => types.Message.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-    setState(() {
-      _messages = messages;
-    });
   }
 }
