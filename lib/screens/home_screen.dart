@@ -19,7 +19,7 @@ import '../widgets/avatar.dart';
 
 final pages = [
   const HomePage(),
-  const ConversationsPage(),
+  const MessagePage(),
   MapPage(),
   const EventsPage(),
   const ProfilePage(),
@@ -123,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 //     // highlightColor: Colors.red,
                 //     splashRadius: 24,
                 //   ),
-                // ),
+                // ), siyaha 151515
               ),
             ),
       body: ValueListenableBuilder(
