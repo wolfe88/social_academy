@@ -20,7 +20,7 @@ final pages = [
   const HomePage(),
   const ConversationsPage(),
   MapPage(),
-  const EventsPage(),
+  EventsScreen(),
   const ProfilePage(),
 ];
 
