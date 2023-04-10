@@ -1,27 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_chat_ui/flutter_chat_ui.dart';
-import 'package:getwidget/getwidget.dart';
-import 'package:sizer/sizer.dart';
-import 'package:social_academy/widgets/popup_widget.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:sizer/sizer.dart';
-import 'package:social_academy/constants/routes.dart';
-import 'package:social_academy/helpers.dart';
-import 'package:social_academy/pages/map_page.dart';
-import 'package:social_academy/pages/events_page.dart';
-import 'package:social_academy/pages/home_page.dart';
-import 'package:social_academy/pages/conversations_page.dart';
-import 'package:social_academy/pages/profile_page.dart';
-import 'package:social_academy/theme.dart';
-import 'package:social_academy/widgets/widgets.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import '../widgets/avatar.dart';
-import '../widgets/custom_image_view.dart';
-import '../widgets/events_item_widget.dart';
 
 class EventsScreen extends StatelessWidget {
   @override
@@ -54,7 +32,7 @@ class EventsScreen extends StatelessWidget {
                             "Yaklaşan Etkinlikler",
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
-                            style: TextStyle(fontSize: 30),
+                            style: TextStyle(color: Colors.black, fontSize: 30),
                           ),
                           Container(
                             width: double.maxFinite,
@@ -95,11 +73,17 @@ class EventsScreen extends StatelessWidget {
                                           children: [
                                             Row(
                                               children: [
-                                                Text(
-                                                  "AppJam",
-                                                  textAlign: TextAlign.left,
-                                                  style: TextStyle(
-                                                    fontSize: 20,
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          left: 8.0),
+                                                  child: Text(
+                                                    "AppJam",
+                                                    textAlign: TextAlign.left,
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 20,
+                                                    ),
                                                   ),
                                                 ),
                                               ],
@@ -107,6 +91,7 @@ class EventsScreen extends StatelessWidget {
                                             Row(
                                               children: [
                                                 Icon(
+                                                  color: Colors.redAccent,
                                                   Icons.location_on,
                                                   size: 30,
                                                 ),
@@ -118,6 +103,7 @@ class EventsScreen extends StatelessWidget {
                                         Column(
                                           children: [
                                             Icon(
+                                              color: Colors.amber,
                                               Icons.add_circle_outline_rounded,
                                               size: 30,
                                             ),
@@ -153,7 +139,7 @@ class EventsScreen extends StatelessWidget {
                         Text(
                           "Topluluk Buluşmaları",
                           textAlign: TextAlign.left,
-                          style: TextStyle(fontSize: 30),
+                          style: TextStyle(color: Colors.black, fontSize: 30),
                         ),
                         SizedBox(height: 20),
                         Row(

@@ -69,7 +69,7 @@ class _ProfiledraverwidgetState extends State<Profiledraverwidget> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(right: 32.0),
-                              child: Icon(Icons.work, color: Colors.green[500]),
+                              child: Icon(Icons.work, color: Colors.redAccent),
                             ),
                             Text(widget.workText, textAlign: TextAlign.left),
                           ],
@@ -82,7 +82,7 @@ class _ProfiledraverwidgetState extends State<Profiledraverwidget> {
                             Padding(
                               padding: const EdgeInsets.only(right: 32.0),
                               child: Icon(Icons.account_balance,
-                                  color: Colors.green[500]),
+                                  color: Colors.blue),
                             ),
                             Text(widget.eduText, textAlign: TextAlign.left),
                           ],
@@ -95,7 +95,7 @@ class _ProfiledraverwidgetState extends State<Profiledraverwidget> {
                             Padding(
                               padding: const EdgeInsets.only(right: 32.0),
                               child: Icon(Icons.auto_awesome,
-                                  color: Colors.green[500]),
+                                  color: Colors.orange),
                             ),
                             Text(widget.skillsText, textAlign: TextAlign.left),
                           ],
@@ -119,7 +119,7 @@ class _ProfiledraverwidgetState extends State<Profiledraverwidget> {
                                   context);
                             },
                             icon: Icon(Icons.info),
-                            color: Colors.green[500]),
+                            color: Colors.lime),
                       ),
                     ],
                   ),
@@ -127,9 +127,6 @@ class _ProfiledraverwidgetState extends State<Profiledraverwidget> {
               ),
             ),
           ],
-          onExpansionChanged: (isExpanded) {
-            print("Expanded: $isExpanded");
-          },
         ),
       ),
     );

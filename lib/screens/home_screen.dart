@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               child: AppBar(
                 centerTitle: true,
-                backgroundColor: Color.fromARGB(255, 226, 222, 222),
+                backgroundColor: Color.fromARGB(255, 233, 205, 80),
                 elevation: 0,
                 title: ValueListenableBuilder(
                   valueListenable: title,
@@ -104,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         },
                         icon: const Icon(
                           CupertinoIcons.bell,
-                          color: AppColors.secondary,
+                          color: AppColors.black,
                         ),
                       ),
                     ),
@@ -112,9 +112,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
                 leading: Padding(
                   padding: const EdgeInsets.only(left: 16),
-                  child: Image(
-                    fit: BoxFit.fitWidth,
-                    image: AssetImage(imageList[24] + ".png"),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Image(image: AssetImage(imageList[24] + ".png")),
                   ),
                 ),
 

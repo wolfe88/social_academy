@@ -1,11 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:social_academy/helpers.dart';
 import 'package:social_academy/theme.dart';
-import 'package:social_academy/widgets/avatar.dart';
 import 'package:social_academy/widgets/textfield.dart';
 
 import '../constants/routes.dart';
@@ -26,6 +23,7 @@ class _ProfilePageState extends State<ProfilePage> {
     return SafeArea(
       child: SingleChildScrollView(
         child: Container(
+          color: Color.fromARGB(252, 241, 204, 91),
           padding: const EdgeInsets.all(4),
           child: Column(
             children: [
@@ -33,7 +31,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 padding: const EdgeInsets.only(top: 24),
                 child: Container(
                   decoration: BoxDecoration(
-                    border: Border.all(width: 10, color: AppColors.solightgrey),
+                    border: Border.all(width: 10, color: Colors.white),
                     borderRadius: BorderRadius.circular(100),
                   ),
                   width: 200,
@@ -58,12 +56,12 @@ class _ProfilePageState extends State<ProfilePage> {
                   alignment: Alignment.center,
                   width: 90.w,
                   decoration: BoxDecoration(
-                    color: AppColors.solightgrey,
-                    border: Border.all(width: 6, color: AppColors.solightgrey),
+                    color: Colors.white,
+                    border: Border.all(width: 6, color: Colors.white),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
-                    "User4623782",
+                    "AkademiKullanıcısı",
                     style: TextStyle(
                       fontSize: 30,
                       color: AppColors.black,
@@ -76,7 +74,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 padding: const EdgeInsets.fromLTRB(0, 6, 0, 0),
                 child: MyTextField(
                     hintText: "İsim",
-                    containerColor: AppColors.solightgrey,
+                    containerColor: Colors.white,
                     textfieldTextColor: AppColors.black,
                     hintColor: AppColors.black,
                     borderRadius: 8),
@@ -85,7 +83,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
                 child: MyTextField(
                     hintText: "Soyisim",
-                    containerColor: AppColors.solightgrey,
+                    containerColor: Colors.white,
                     textfieldTextColor: Colors.black,
                     hintColor: Colors.black,
                     borderRadius: 8),
@@ -94,7 +92,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
                 child: MyTextField(
                     hintText: "Telefon Numarası",
-                    containerColor: AppColors.solightgrey,
+                    containerColor: Colors.white,
                     textfieldTextColor: Colors.black,
                     hintColor: Colors.black,
                     borderRadius: 8),
@@ -102,8 +100,8 @@ class _ProfilePageState extends State<ProfilePage> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
                 child: MyTextField(
-                    hintText: "e-Posta Adresiniz",
-                    containerColor: AppColors.solightgrey,
+                    hintText: "E-Posta Adresiniz",
+                    containerColor: Colors.white,
                     textfieldTextColor: Colors.black,
                     hintColor: Colors.black,
                     borderRadius: 8),
@@ -113,7 +111,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   alignment: Alignment.topLeft,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    color: AppColors.solightgrey,
+                    color: Colors.white,
                   ),
                   child: SwitchListTile(
                       activeColor: AppColors.secondary,
@@ -124,7 +122,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         });
                       },
                       title: Text(
-                        "Konumumu aktif et.",
+                        "Konumumu Aktif Et",
                         style: TextStyle(color: AppColors.black),
                       ))),
               Container(
@@ -135,7 +133,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: AppColors.solightgrey,
+                  color: Colors.white,
                 ),
                 child: TextField(
                   keyboardType: TextInputType.multiline,
@@ -145,7 +143,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(16),
                     border: InputBorder.none,
-                    hintText: 'Bize kendinden bahset.',
+                    hintText: 'Bize Kendinden Bahset...',
                     hintStyle: TextStyle(color: Colors.black),
                   ),
                 ),

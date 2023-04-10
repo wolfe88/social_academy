@@ -127,7 +127,7 @@ class NotificationBubble extends StatelessWidget {
         margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: AppColors.solightgrey,
+          color: Color.fromARGB(184, 236, 195, 112),
         ),
         child: Padding(
           padding: const EdgeInsets.all(16),

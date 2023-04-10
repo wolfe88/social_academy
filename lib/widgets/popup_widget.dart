@@ -132,15 +132,18 @@ Future openDialog(
                 children: [
                   IconButton(
                     onPressed: () {},
-                    color: Colors.blue,
+                    color: AppColors.accent,
                     icon: Icon(
                       size: 40,
                       Icons.add_box,
                     ),
                   ),
+                  SizedBox(
+                    width: 60,
+                  ),
                   IconButton(
                     onPressed: () {},
-                    color: Colors.blue,
+                    color: AppColors.accent,
                     icon: Icon(
                       size: 40,
                       Icons.mail,
