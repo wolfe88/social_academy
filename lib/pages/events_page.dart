@@ -73,7 +73,9 @@ class EventsScreen extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Container(
-                                    child: Image.asset("assets/event.png"),
+                                    child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(10),
+                                        child: Image.asset("assets/event.png")),
                                     margin: EdgeInsets.only(
                                       top: 2,
                                     ),
@@ -134,39 +136,101 @@ class EventsScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 14,
-                    ),
-                    child: Text(
-                      "Topluluk Buluşmaları",
-                      overflow: TextOverflow.ellipsis,
-                      textAlign: TextAlign.left,
-                      style: TextStyle(fontSize: 28),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Divider(
+                  color: Colors.teal.shade200,
+                ),
+              ),
+              SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      left: 8, top: 16, right: 8, bottom: 6),
+                  child: Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Topluluk Buluşmaları",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(fontSize: 30),
+                        ),
+                        SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Expanded(
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.asset('assets/bulusma.png')),
+                            ),
+                            SizedBox(width: 30),
+                            Expanded(
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.asset('assets/bulusma1.png')),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Expanded(
+                              child: Text(
+                                'Ankara Buluşması',
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                            SizedBox(width: 30),
+                            Expanded(
+                              child: Text(
+                                'Eskişehir Kod',
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 40),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Expanded(
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.asset('assets/bulusma2.png')),
+                            ),
+                            SizedBox(width: 30),
+                            Expanded(
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.asset('assets/bulusma3.png')),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Expanded(
+                              child: Text(
+                                'Mentor Buluşması Ankara',
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                            SizedBox(width: 30),
+                            Expanded(
+                              child: Text(
+                                'İstanbul Topluluk Buluşması',
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 8,
-                    ),
-                    child: GridView.builder(
-                      shrinkWrap: true,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        mainAxisExtent: 146,
-                        crossAxisCount: 2,
-                        mainAxisSpacing: 28,
-                        crossAxisSpacing: 28,
-                      ),
-                      physics: NeverScrollableScrollPhysics(),
-                      itemCount: 4,
-                      itemBuilder: (context, index) {
-                        return EventsItemWidget();
-                      },
-                    ),
-                  ),
-                ],
+                ),
               ),
             ],
           ),
