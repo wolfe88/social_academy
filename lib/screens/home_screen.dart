@@ -12,7 +12,6 @@ import 'package:social_academy/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-
 import '../widgets/avatar.dart';
 
 // int pageIndex0 = 0;
@@ -21,7 +20,7 @@ final pages = [
   const HomePage(),
   const MessagePage(),
   MapPage(),
-  const EventsPage(),
+  EventsScreen(),
   const ProfilePage(),
 ];
 
@@ -58,8 +57,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ? null
           : PreferredSize(
               preferredSize: Size(
-                40,
-                40,
+                50,
+                60,
               ),
               child: AppBar(
                 centerTitle: true,
@@ -68,25 +67,28 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: ValueListenableBuilder(
                   valueListenable: title,
                   builder: (context, value, child) {
-                    return RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: 'Selin\n',
-                            style: TextStyle(
-                              fontSize: 24.0,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
+                    return Align(
+                      alignment: Alignment.centerLeft,
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'Selin\n',
+                              style: TextStyle(
+                                fontSize: 24.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
                             ),
-                          ),
-                          TextSpan(
-                            text: 'Hoşgeldin!',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                              color: Colors.grey,
+                            TextSpan(
+                              text: 'Hoşgeldin!',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Colors.grey,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     );
                   },
@@ -94,21 +96,24 @@ class _HomeScreenState extends State<HomeScreen> {
                 actions: [
                   Align(
                     alignment: Alignment.centerRight,
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.of(context).pushNamed(notificationRoute);
-                      },
-                      icon: const Icon(
-                        CupertinoIcons.bell,
-                        color: AppColors.iconDark,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 16),
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.of(context).pushNamed(notificationRoute);
+                        },
+                        icon: const Icon(
+                          CupertinoIcons.bell,
+                          color: AppColors.iconDark,
+                        ),
                       ),
                     ),
                   )
                 ],
                 leading: Padding(
-                  padding: const EdgeInsets.only(left: 18.0),
+                  padding: const EdgeInsets.only(left: 16),
                   child: Image(
-                    fit: BoxFit.cover,
+                    fit: BoxFit.fitWidth,
                     image: AssetImage("assets/avatar (4).png"),
                   ),
                 ),
