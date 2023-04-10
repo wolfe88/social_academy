@@ -5,7 +5,7 @@ import 'package:social_academy/widgets/avatar.dart';
 import 'dart:math';
 import 'package:social_academy/widgets/map_item_widget.dart';
 import '../widgets/custom_image_view.dart';
-
+import 'package:social_academy/widgets/popup_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -90,7 +90,7 @@ class _Stories extends StatelessWidget {
                                       child: Icon(Icons.work, color: Colors.green[500]),
                                     ),
                                   
-                                    const Text('Proje - Google Türkiye', textAlign: TextAlign.left),
+                                    const Text('Proje Müdürü - Google Türkiye', textAlign: TextAlign.left),
                                   ],
                                 ),
                               ),
@@ -128,6 +128,7 @@ class _Stories extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(right:16.0),
                                 child: IconButton(onPressed:() {
+                                  openDialog("Yunus Emre", "Proje Müdürü - Google Türkiye", "İstanbul Teknik Üniversitesi", "Flutter, Figma, Blender" , "Bir takım açıklamaları burada bulabildiğinizi düşünüyoruz.", context);
                                 }, icon: Icon(Icons.info),
                                           color: Colors.green[500]),
                               ),
