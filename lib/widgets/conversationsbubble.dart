@@ -38,7 +38,8 @@ class _ConversationsBubble extends State<ConversationsBubble> {
       child: SizedBox(
         height: 12.h,
         child: GFButton(
-          color: AppColors.accent,
+          borderSide: BorderSide(width: 1),
+          color: AppColors.secondary,
           onPressed: () {},
           child: Row(
             children: [

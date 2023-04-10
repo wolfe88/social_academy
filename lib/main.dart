@@ -1,5 +1,6 @@
 import 'package:sizer/sizer.dart';
 import 'package:social_academy/constants/routes.dart';
+import 'package:social_academy/models/message.dart';
 import 'package:social_academy/pages/chat_page.dart';
 import 'package:social_academy/pages/map_page.dart';
 import 'package:social_academy/pages/events_page.dart';
@@ -24,13 +25,13 @@ class BasePage extends StatelessWidget {
         return MaterialApp(
           theme: AppTheme.light(),
           darkTheme: AppTheme.dark(),
-          themeMode: ThemeMode.dark,
+          themeMode: ThemeMode.light,
           debugShowCheckedModeBanner: false,
           title: "social_academy",
           home: const HomeScreen(), //child appbar
           routes: {
             homepageRoute: (context) => const HomePage(),
-            conversationspageRoute: (context) => const ConversationsPage(),
+            conversationspageRoute: (context) => const MessagePage(),
             mappageRoute: (context) => MapPage(),
             eventspageRoute: (context) => const EventsPage(),
             profilepageRoute: (context) => const ProfilePage(),
