@@ -3,7 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 abstract class AppColors {
   static const secondary = Color.fromRGBO(245, 176, 40, 1);
-  static const accent = Color(0xFFD6755B);
+  static const primary = Color.fromRGBO(245, 176, 40, 1);
+  static const accent = Color.fromRGBO(245, 176, 40, 1);
+  static const black = Color.fromRGBO(18, 18, 18, 1);
+  static const solightgrey = Color.fromARGB(255, 208, 204, 204);
   static const textDark = Color(0xFF53585A);
   static const textLigth = Color(0xFFF5F5F5);
   static const textFaded = Color(0xFF9899A5);

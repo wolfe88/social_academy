@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:social_academy/main.dart';
+import 'package:social_academy/theme.dart';
 
 class LeftChatBuble extends StatelessWidget {
   final String text;
@@ -126,7 +127,7 @@ class NotificationBubble extends StatelessWidget {
         margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: Colors.white,
+          color: AppColors.solightgrey,
         ),
         child: Padding(
           padding: const EdgeInsets.all(16),

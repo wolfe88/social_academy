@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import 'package:social_academy/helpers.dart';
 import 'package:social_academy/theme.dart';
 import 'package:social_academy/widgets/avatar.dart';
@@ -31,15 +32,19 @@ class _ProfilePageState extends State<ProfilePage> {
               Padding(
                 padding: const EdgeInsets.only(top: 24),
                 child: Container(
-                  width: 180,
-                  height: 180,
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 10, color: AppColors.solightgrey),
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  width: 200,
+                  height: 200,
                   child: InkWell(
                     radius: 200,
                     onTap: () {
                       Navigator.of(context).pushNamed(avatarRoute);
                     },
                     child: CustomImageView(
-                      imagePath: imageList[2] + ".png",
+                      imagePath: imageList[24] + ".png",
                       height: 48,
                       width: 48,
                     ),
@@ -48,18 +53,39 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               const SizedBox(height: 10),
               Padding(
-                padding: const EdgeInsets.only(top: 16),
-                child: Text(
-                  "Kullanıcı Adı",
-                  style: TextStyle(fontSize: 20),
+                padding: const EdgeInsets.only(top: 12),
+                child: Container(
+                  alignment: Alignment.center,
+                  width: 90.w,
+                  decoration: BoxDecoration(
+                    color: AppColors.solightgrey,
+                    border: Border.all(width: 6, color: AppColors.solightgrey),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(
+                    "User4623782",
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: AppColors.black,
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(height: 10),
               Padding(
+                padding: const EdgeInsets.fromLTRB(0, 6, 0, 0),
+                child: MyTextField(
+                    hintText: "İsim",
+                    containerColor: AppColors.solightgrey,
+                    textfieldTextColor: AppColors.black,
+                    hintColor: AppColors.black,
+                    borderRadius: 8),
+              ),
+              Padding(
                 padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
                 child: MyTextField(
-                    hintText: "İsiminiz",
-                    containerColor: Colors.white,
+                    hintText: "Soyisim",
+                    containerColor: AppColors.solightgrey,
                     textfieldTextColor: Colors.black,
                     hintColor: Colors.black,
                     borderRadius: 8),
@@ -67,17 +93,8 @@ class _ProfilePageState extends State<ProfilePage> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
                 child: MyTextField(
-                    hintText: "Soyisiminiz",
-                    containerColor: Colors.white,
-                    textfieldTextColor: Colors.black,
-                    hintColor: Colors.black,
-                    borderRadius: 8),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
-                child: MyTextField(
-                    hintText: "Telefon Numaranız",
-                    containerColor: Colors.white,
+                    hintText: "Telefon Numarası",
+                    containerColor: AppColors.solightgrey,
                     textfieldTextColor: Colors.black,
                     hintColor: Colors.black,
                     borderRadius: 8),
@@ -86,23 +103,30 @@ class _ProfilePageState extends State<ProfilePage> {
                 padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
                 child: MyTextField(
                     hintText: "e-Posta Adresiniz",
-                    containerColor: Colors.white,
+                    containerColor: AppColors.solightgrey,
                     textfieldTextColor: Colors.black,
                     hintColor: Colors.black,
                     borderRadius: 8),
               ),
               Container(
-                  margin: EdgeInsets.fromLTRB(16, 10, 16, 0),
+                  margin: EdgeInsets.fromLTRB(16, 16, 16, 0),
                   alignment: Alignment.topLeft,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: AppColors.solightgrey,
+                  ),
                   child: SwitchListTile(
-                      activeColor: Colors.white,
+                      activeColor: AppColors.secondary,
                       value: s1,
                       onChanged: (bool value) {
                         setState(() {
                           s1 = value;
                         });
                       },
-                      title: Text("Konumumu aktif et."))),
+                      title: Text(
+                        "Konumumu aktif et.",
+                        style: TextStyle(color: AppColors.black),
+                      ))),
               Container(
                 height: 200,
                 constraints: BoxConstraints(
@@ -111,7 +135,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: Colors.white,
+                  color: AppColors.solightgrey,
                 ),
                 child: TextField(
                   keyboardType: TextInputType.multiline,

@@ -11,8 +11,17 @@ List<String> AvatarListRandom() {
 }
 
 class MapItemWidget extends StatelessWidget {
-  MapItemWidget();
-
+  List names = [
+    "Dilara",
+    "Fatma",
+    "Çağatay",
+    "Ahmet",
+    "Mehmet",
+    "Ela",
+    "Melisa",
+    "Berk",
+    "Ekin",
+  ];
   final imageList = AvatarListRandom();
   final random = Random();
 
@@ -38,7 +47,7 @@ class MapItemWidget extends StatelessWidget {
                   top: 8,
                 ),
                 child: Text(
-                  "Lorem",
+                  names[random.nextInt(9)],
                   style: TextStyle(fontSize: 12, color: Colors.black),
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,

@@ -1,6 +1,5 @@
 import 'package:sizer/sizer.dart';
 import 'package:social_academy/constants/routes.dart';
-import 'package:social_academy/models/message.dart';
 import 'package:social_academy/pages/chat_page.dart';
 import 'package:social_academy/pages/map_page.dart';
 import 'package:social_academy/pages/events_page.dart';
@@ -31,7 +30,7 @@ class BasePage extends StatelessWidget {
           home: const HomeScreen(), //child appbar
           routes: {
             homepageRoute: (context) => const HomePage(),
-            conversationspageRoute: (context) => const MessagePage(),
+            conversationspageRoute: (context) => const ConversationsPage(),
             mappageRoute: (context) => MapPage(),
             eventspageRoute: (context) => EventsScreen(),
             profilepageRoute: (context) => const ProfilePage(),

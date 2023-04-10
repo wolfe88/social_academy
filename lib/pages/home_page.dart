@@ -1,9 +1,11 @@
+import 'package:social_academy/constants/routes.dart';
 import 'package:social_academy/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:social_academy/widgets/avatar.dart';
 import 'dart:math';
 import 'package:social_academy/widgets/map_item_widget.dart';
+import 'package:social_academy/widgets/profiledraverwidget.dart';
 import '../widgets/custom_image_view.dart';
 import 'package:social_academy/widgets/popup_widget.dart';
 
@@ -22,8 +24,6 @@ class HomePage extends StatelessWidget {
 final imageList = AvatarListRandom();
 final random = Random();
 
-List username = ["Yunus Emre", "Selin", "Rabia", "Dilara"];
-
 class _Stories extends StatelessWidget {
   const _Stories({super.key});
   @override
@@ -34,116 +34,91 @@ class _Stories extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           SafeArea(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-              child: Column(
-                children: [
-                  TextField(
-                    obscureText: false,
-                    decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.search),
-                      border: OutlineInputBorder(),
-                      labelText: 'Yeni bağlantını bul...',
-                      suffixIcon: IconButton(
-                        icon: Icon(Icons.tune),
-                        onPressed: () {},
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: ExpansionTile(
-                  leading: CustomImageView(
-                    imagePath: imageList[random.nextInt(85)] + ".png",
-                    height: 48,
-                    width: 48,
-                  ),
-
-                  title: Text(
-                    username[0],
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.yellow),
-                  ), // Text
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left:12.0),
-                      child: Row(
-                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(16.0),
-                                child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(right:32.0),
-                                      child: Icon(Icons.work, color: Colors.green[500]),
-                                    ),
-                                  
-                                    const Text('Proje Müdürü - Google Türkiye', textAlign: TextAlign.left),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(16.0),
-                                child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(right:32.0),
-                                      child: Icon(Icons.account_balance,
-                                          color: Colors.green[500]),
-                                    ),
-                                    const Text('Istanbul Teknik Üniversitesi',textAlign: TextAlign.left),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(16.0),
-                              
-                                child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(right:32.0),
-                                      child: Icon(Icons.auto_awesome,
-                                          color: Colors.green[500]),
-                                    ),
-                                    const Text('Flutter, Figma, Blender', textAlign: TextAlign.left),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right:16.0),
-                                child: IconButton(onPressed:() {
-                                  openDialog("Yunus Emre", "Proje Müdürü - Google Türkiye", "İstanbul Teknik Üniversitesi", "Flutter, Figma, Blender" , "Bir takım açıklamaları burada bulabildiğinizi düşünüyoruz.", context);
-                                }, icon: Icon(Icons.info),
-                                          color: Colors.green[500]),
-                              ),
-                          ],
-                           ),
-                        ],
-                      ),
-                    ),
-                  ],
-                  onExpansionChanged: (isExpanded) {
-                    print("Expanded: $isExpanded");
-                  },
+            child: Column(
+              children: [
+                Profiledraverwidget(
+                  userNameText: "Dilara",
+                  workText: "LEGO Türkiye'de Eğitimci",
+                  eduText: "ODTÜ, İngilizce Öğretmenliği",
+                  skillsText: "Çizim, Tasarım, Eğitim",
+                  infoText:
+                      "Merhaba ben Dilara. Uzun zamandır tasarımla ve resimle ilgileniyorum. Ankara'da yaşıyorum. Yeni şeyler öğrenmeyi seviyorum.",
+                  avatarindex: 57,
                 ),
-              ),
-            ],
+                Profiledraverwidget(
+                  userNameText: "Selin",
+                  workText: "Kaller Akademi'de Dansçı",
+                  eduText: "İTÜ, Güzel Sanatlar",
+                  skillsText: "Spor, Dans, Flutter",
+                  infoText:
+                      "Merhaba ben Selin. Uzun zamandır dansla ve yazılımla ilgileniyorum.. Uzun zamandır dansla ve yazılımla ilgileniyorum.. Uzun zamandır dansla ve yazılımla ilgileniyorum.. Uzun zamandır . Uzun zamandır dansla ve yazılımla ilgileniyorum.. Uzun zamandır dansla ve yazılımla ilgileniyorum.. Uzun zamandır dansla ve yazılımla ilgileniyorum.. Uzun zamandır dansla ve yazılımla ilgileniyorum.. Uzun zamandır dansla ve yazılımla ilgileniyorum.. Uzun zamandır dansla ve yazılımla ilgileniyorum.dansla ve yazılımla ilgileniyorum.. Uzun zamandır dansla ve yazılımla ilgileniyorum. Flutterla uygulama geliştirmek için takım arkadaşları arıyorum.",
+                  avatarindex: 28,
+                ),
+                Profiledraverwidget(
+                  userNameText: "Çağatay",
+                  workText: "Gerçek bir UI/UX designer",
+                  eduText: "Harvard, Çevre Mühendisliği",
+                  skillsText: "Çizim, Tasarım, Flutter",
+                  infoText:
+                      "Merhaba ben Çağatay. Uzun zamandır tasarımla ve flutterla ilgileniyorum. San Francisco'da yaşıyorum. Yeni şeyler öğrenmeyi seviyorum.",
+                  avatarindex: 65,
+                ),
+                Profiledraverwidget(
+                  userNameText: "Rabia",
+                  workText: "TAI'de yazılımcı",
+                  eduText: "ODTÜ, Yazılım Mühendisliği",
+                  skillsText: "Yazılım, Flutter, Assambly",
+                  infoText:
+                      "Merhaba ben Rabia. Uzun zamandır tasarımla ve resimle ilgileniyorum. Ankara'da yaşıyorum. Yeni şeyler öğrenmeyi seviyorum.",
+                  avatarindex: 12,
+                ),
+                Profiledraverwidget(
+                  userNameText: "Yunus Emre",
+                  workText: "Freelancer yazılımcı",
+                  eduText: "İstanbul Üniversitesi Bilişim",
+                  skillsText: "Yazılım, Flutter",
+                  infoText:
+                      "Merhaba ben Yunus Emre. Uzun zamandır tasarımla ve resimle ilgileniyorum. Ankara'da yaşıyorum. Yeni şeyler öğrenmeyi seviyorum.",
+                  avatarindex: 81,
+                ),
+                Profiledraverwidget(
+                  userNameText: "Mehmet",
+                  workText: "Mahalle Dönercisi",
+                  eduText: "Hayat Üniversitesi",
+                  skillsText: "Dans, Özlü sözler, Aşk",
+                  infoText:
+                      "Merhaba ben Mehmet. Bağcılarda yaşıyorum. Tanışmak isterim.",
+                  avatarindex: 1,
+                ),
+                Profiledraverwidget(
+                  userNameText: "Fatma",
+                  workText: "Teknosa'da CEO",
+                  eduText: "ODTÜ, İşletme",
+                  skillsText: "Para, Yönetim",
+                  infoText:
+                      "Merhaba ben Fatma. Uzun zamandır tasarımla ve resimle ilgileniyorum. Ankara'da yaşıyorum. Yeni şeyler öğrenmeyi seviyorum.",
+                  avatarindex: 2,
+                ),
+                Profiledraverwidget(
+                  userNameText: "Fatma",
+                  workText: "Teknosa'da CEO",
+                  eduText: "ODTÜ, İşletme",
+                  skillsText: "Para, Yönetim",
+                  infoText:
+                      "Merhaba ben Fatma. Uzun zamandır tasarımla ve resimle ilgileniyorum. Ankara'da yaşıyorum. Yeni şeyler öğrenmeyi seviyorum.",
+                  avatarindex: 13,
+                ),
+                Profiledraverwidget(
+                  userNameText: "Fatma",
+                  workText: "Teknosa'da CEO",
+                  eduText: "ODTÜ, İşletme",
+                  skillsText: "Para, Yönetim",
+                  infoText:
+                      "Merhaba ben Fatma. Uzun zamandır tasarımla ve resimle ilgileniyorum. Ankara'da yaşıyorum. Yeni şeyler öğrenmeyi seviyorum.",
+                  avatarindex: 14,
+                ),
+              ],
+            ),
           ),
         ],
       ),

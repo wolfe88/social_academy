@@ -18,7 +18,7 @@ import '../widgets/avatar.dart';
 
 final pages = [
   const HomePage(),
-  const MessagePage(),
+  const ConversationsPage(),
   MapPage(),
   EventsScreen(),
   const ProfilePage(),
@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               child: AppBar(
                 centerTitle: true,
-                backgroundColor: Colors.white,
+                backgroundColor: Color.fromARGB(255, 226, 222, 222),
                 elevation: 0,
                 title: ValueListenableBuilder(
                   valueListenable: title,
@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               text: 'Hoşgeldin!',
                               style: TextStyle(
                                 fontSize: 16.0,
-                                color: Colors.grey,
+                                color: AppColors.black,
                               ),
                             ),
                           ],
@@ -104,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         },
                         icon: const Icon(
                           CupertinoIcons.bell,
-                          color: AppColors.iconDark,
+                          color: AppColors.secondary,
                         ),
                       ),
                     ),
@@ -114,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.only(left: 16),
                   child: Image(
                     fit: BoxFit.fitWidth,
-                    image: AssetImage("assets/avatar (4).png"),
+                    image: AssetImage(imageList[24] + ".png"),
                   ),
                 ),
 
@@ -171,45 +171,48 @@ class _BottomNavigationBarState extends State<_BottomNavigationBar> {
     return SafeArea(
         top: false,
         bottom: true,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            _NavigationBarItem(
-              label: "Home",
-              icon: CupertinoIcons.home,
-              route: 0,
-              onTap: handleItemSelected,
-              isSelected: (selectedIndex == 0),
-            ),
-            _NavigationBarItem(
-              label: "Sohbetler",
-              icon: CupertinoIcons.bubble_left_bubble_right,
-              route: 1,
-              onTap: handleItemSelected,
-              isSelected: (selectedIndex == 1),
-            ),
-            _NavigationBarItem(
-              label: "Harita",
-              icon: CupertinoIcons.map,
-              route: 2,
-              onTap: handleItemSelected,
-              isSelected: (selectedIndex == 2),
-            ),
-            _NavigationBarItem(
-              label: "Ekinlikler",
-              icon: CupertinoIcons.rectangle_stack_badge_person_crop,
-              route: 3,
-              onTap: handleItemSelected,
-              isSelected: (selectedIndex == 3),
-            ),
-            _NavigationBarItem(
-              label: "Profil",
-              icon: CupertinoIcons.person,
-              route: 4,
-              onTap: handleItemSelected,
-              isSelected: (selectedIndex == 4),
-            ),
-          ],
+        child: Container(
+          color: Color.fromARGB(255, 238, 238, 238),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              _NavigationBarItem(
+                label: "Home",
+                icon: CupertinoIcons.home,
+                route: 0,
+                onTap: handleItemSelected,
+                isSelected: (selectedIndex == 0),
+              ),
+              _NavigationBarItem(
+                label: "Sohbetler",
+                icon: CupertinoIcons.bubble_left_bubble_right,
+                route: 1,
+                onTap: handleItemSelected,
+                isSelected: (selectedIndex == 1),
+              ),
+              _NavigationBarItem(
+                label: "Harita",
+                icon: CupertinoIcons.map,
+                route: 2,
+                onTap: handleItemSelected,
+                isSelected: (selectedIndex == 2),
+              ),
+              _NavigationBarItem(
+                label: "Ekinlikler",
+                icon: CupertinoIcons.rectangle_stack_badge_person_crop,
+                route: 3,
+                onTap: handleItemSelected,
+                isSelected: (selectedIndex == 3),
+              ),
+              _NavigationBarItem(
+                label: "Profil",
+                icon: CupertinoIcons.person,
+                route: 4,
+                onTap: handleItemSelected,
+                isSelected: (selectedIndex == 4),
+              ),
+            ],
+          ),
         ));
   }
 }
@@ -244,7 +247,7 @@ class _NavigationBarItem extends StatelessWidget {
             icon: Icon(
               icon,
               size: 25,
-              color: isSelected ? AppColors.secondary : null,
+              color: isSelected ? AppColors.accent : AppColors.black,
             ),
           ),
           const SizedBox(
@@ -254,7 +257,7 @@ class _NavigationBarItem extends StatelessWidget {
             label,
             style: isSelected
                 ? const TextStyle(
-                    color: AppColors.secondary,
+                    color: AppColors.accent,
                     fontWeight: FontWeight.bold,
                     fontSize: 14,
                   )
