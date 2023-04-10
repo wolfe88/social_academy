@@ -32,7 +32,7 @@ class BasePage extends StatelessWidget {
             homepageRoute: (context) => const HomePage(),
             conversationspageRoute: (context) => const ConversationsPage(),
             mappageRoute: (context) => MapPage(),
-            eventspageRoute: (context) => const EventsPage(),
+            eventspageRoute: (context) => EventsScreen(),
             profilepageRoute: (context) => const ProfilePage(),
             chatRoute: (context) => const ChatPage(),
             notificationRoute: (context) => const NotificationPage(),
